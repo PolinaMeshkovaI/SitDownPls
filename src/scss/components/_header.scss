@@ -1,0 +1,388 @@
+.header {
+  &__top {
+    @include flex-all-sb;
+    padding: 2px 0;
+  }
+  &__center {
+    @include flex-all-sb;
+    padding: 34px 0;
+  }
+  &__bottom {
+    @include flex-all-sb;
+    padding-bottom: 65px;
+  }
+  &__search {
+    position: relative;
+    width: 761px;
+    background-color: $grey_light;
+  }
+
+}
+.top {
+  &__contacts {
+    @include flex-all-sb;
+  }
+  &__select {
+    @include flex-all-sb;
+    margin-right: 17px;
+    font-size: 16px;
+    line-height: 120%;
+    color: $black;
+  }
+  &__select .choices {
+    width: 91px;
+    &__inner {
+      padding-left: 2px;
+      background: none;
+      color: $primary;
+      font-size: 16px;
+      line-height: 120%;
+      border: none;
+      z-index: 5;
+      transition: color 0.3s ease-in-out;
+      &:focus {
+        color: $primary_shade;
+        background-color: $pink_violet;
+      }
+      &:hover {
+        color: $primary_light;
+      }
+      &:active {
+        color: $primary_shade;
+      }
+    }
+    &[data-type*=select-one]:after {
+      height: 8px;
+      width: 8px;
+      z-index: 3;
+      top: 40%;
+      border: 1px solid $primary;
+      border-width: 0 0 1px 1px;
+      transform: rotate(-45deg);
+    }
+    &[data-type*=select-one].is-open:after {
+      top: 60%;
+      border: 1px solid $primary;
+      border-width: 1px 1px 0 0;
+      &:hover :after {
+        color: $primary_light;
+      }
+      &:active :after {
+        color: $primary_shade;
+      }
+    }
+    &__list {
+      &--dropdown {
+      padding: 16px;
+      }
+    }
+    &__item {
+      &--selectable {
+        padding: 0;
+      }
+    }
+  }
+  &__select .is-focused .choices__list--single {
+    background-color: $pink_violet;
+  }
+  &__img  {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+    fill: $secondary;
+    transition: fill 0.3s ease-in-out;
+  }
+  &__tel a {
+    font-size: 14px;
+    line-height: 100%;
+    color: $secondary;
+    transition: color 0.3s ease-in-out;
+  }
+  &__tel {
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: $bone;
+    }
+    &:active{
+      background-color: none;
+    }
+    &:focus a {
+      color: $secondary_light;
+    }
+    &:hover a {
+        color: $secondary;
+    }
+    &:active a {
+        color: $secondary_shade;
+    }
+    &:focus svg{
+      fill: $secondary_light;
+    }
+    &:hover svg{
+        fill: $secondary;
+    }
+    &:active svg{
+        fill: $secondary_shade;
+    }
+  }
+  .menu {
+    &__list {
+      @include flex-all-sb;
+    }
+    &__item:not(:last-child) {
+      margin-right: 64px;
+    }
+    &__link {
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        color: $primary_shade;
+        background-color: $pink_violet;
+      }
+      &:hover {
+        color: $primary_light;
+        background-color: none;
+      }
+      &:active {
+        color: $primary_shade;
+        background-color: none;
+      }
+    }
+  }
+}
+.is-focused .is-open .choices__list--single {
+  background-color: none;
+}
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding: 0px;
+}
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  font-size: 14px;
+}
+.nav {
+  &__list {
+    @include flex-v-center;
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 22px;
+    color: $black;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        color: $primary_shade;
+        background-color: $pink_violet;
+      }
+      &:hover {
+        color: $primary_light;
+        background-color: none;
+      }
+      &:active {
+        color: $primary_shade;
+        background-color: none;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 92px;
+  }
+}
+.bottom {
+  &__wrapper {
+    @include flex-all-sb;
+    width: 81%;
+  }
+  &__select .choices {
+    background-color: none;
+    width: 300px;
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 16px 112px 16px 32px;
+      border: 2px solid $grey_light;
+      background: none;
+      border-radius: 0px 10px 10px 0px;
+      z-index: 5;
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      &:hover {
+        color: $primary;
+        border-color: $primary;
+      }
+      &:active {
+        color: $primary;
+        border-color: $primary_shade;
+      }
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      &--single {
+        padding: 2px;
+      }
+      &--dropdown {
+        display: block;
+        top: calc(100% - 10px);
+        padding-top: 30px;
+
+        &.is-active {
+          border: 2px solid $grey_light;
+          border-top-width: 0;
+
+        }
+        & .choices__placeholder {
+          display: none;
+        }
+        & .choices__item--selectable {
+          padding-left: 30px;
+          padding-bottom: 10px;
+      }
+      }
+    }
+    &[data-type*=select-one] .choices__inner {
+      padding: 12px 112px 12px 32px;
+      font-size: 16px;
+      line-height: 22px;
+      color: $primary;
+    }
+    &[data-type*=select-one]:after {
+      height: 8px;
+      width: 8px;
+      z-index: 10;
+      top: 45%;
+      right: 35px;
+      border: 1px solid $primary;
+      border-width: 0 0 1px 1px;
+      transform: rotate(-45deg);
+    }
+    &[data-type*=select-one].is-open:after {
+      top: 65%;
+      right: 35px;
+      border: 1px solid $primary;
+      border-width: 1px 1px 0 0;
+      transition: color 0.3s ease-in-out;
+      &:hover :after {
+        color: $primary_light;
+      }
+      &:active :after {
+        color: $primary_shade;
+      }
+    }
+  }
+  &__select .is-focused .choices__inner {
+    background-color: $pink_light;
+    border-color: $primary;
+  }
+  &__select .is-open .choices__inner {
+    background: none;
+    border-color: $primary;
+  }
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+  }
+  &__link:not(:last-child) {
+    margin-right: 22px;
+  }
+  &__link:focus-within {
+    background-color: $pink_violet;
+  }
+  &__right {
+    &--use {
+      position: relative;
+      width: 26px;
+      height: 28px;
+      fill: $primary;
+      transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        fill: $primary_shade;
+      }
+      &:hover {
+        fill: $primary_light;
+        background-color: none;
+      }
+      &:active {
+        fill: $primary_shade;
+        background-color: none;
+      }
+    }
+    &--cart {
+      width: 41px;
+      height: 28px;
+      fill: $primary;
+      transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        fill: $primary_shade;
+        background: $pink_violet;
+      }
+      &:hover {
+        fill: $primary_light;
+        background-color: none;
+      }
+      &:active {
+        fill: $primary_shade;
+        background-color: none;
+      }
+    }
+  }
+  &__counter {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-top: 3px;
+    text-align: center;
+    vertical-align: middle;
+    left: 3px;
+    top: 25%;
+    color: $light-color;
+    background-color: $secondary;
+    font-size: 10px;
+    line-height: 100%;
+    border-radius: 50%;
+  }
+}
+.search {
+  &__input {
+    position: relative;
+    width: 100%;
+    min-width: 761px;
+    padding: 18px 0;
+    padding-left: 60px;
+    padding-right: 65px;
+    background-color: $grey_light;
+    transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out, outline-color 0.3 ease-in-out;
+      &:focus-visible  {
+        background-color: $pink_light;
+        outline-color: $primary;
+      }
+      &:hover {
+        background-color: $md_grey;
+        outline: none;
+      }
+      &:active + svg{
+        fill: $primary;
+      }
+  }
+  &__pic {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 32px;
+    bottom: 16px;
+    fill: $grey;
+  }
+  &__img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    fill: none;
+    stroke: $primary;
+  }
+  &__btn {
+    position: absolute;
+    right: 32px;
+    bottom: 10px;
+  }
+}
+
+
+
