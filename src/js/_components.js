@@ -2,3 +2,6 @@ import { castomChoicesCity, castomChoicesProduct } from "./components/castom-cho
 castomChoicesCity();
 castomChoicesProduct();
 
+import { swiperHero } from "./components/swiper_hero";
+swiperHero();
+

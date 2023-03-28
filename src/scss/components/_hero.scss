@@ -1,0 +1,69 @@
+.swiper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+}
+.hero {
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    z-index: 15;
+  }
+  &__wrapper {
+    padding: 84px $container-offset;
+    z-index: 20;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: $grey;
+    &--white {
+      color: $light-color;
+    }
+  }
+  &__btn {
+    padding: 22px 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: $light-color;
+    background: $primary;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+    &:focus {
+      background: $primary_light;
+      border: 2px solid $primary_shade;
+    }
+    &:hover {
+      background: $primary_light;
+    }
+    &:active {
+      background: $primary_shade;
+    }
+    &:disabled {
+      background: $md_grey;
+      color: $grey;
+    }
+  }
+  &__slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &--bg1 {
+      background-image: url(../../img/slide_1.jpg);
+    }
+    &--bg2 {
+      background-image: url(../../img/slide_2.jpg);
+    }
+    &--bg3 {
+      background-image: url(../../img/slide_3.jpg);
+    }
+  }
+}
