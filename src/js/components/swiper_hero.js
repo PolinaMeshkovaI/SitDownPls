@@ -1,13 +1,23 @@
-import Swiper, { Autoplay } from 'swiper';
-Swiper.use([Autoplay]);
+import Swiper, { Autoplay, Navigation } from 'swiper';
+Swiper.use([Autoplay, Navigation]);
 
-export const swiperHero = () => {
-  const swiper = new Swiper('.swiper', {
+export const swiper= () => {
+  const swiperHero = new Swiper('.swiper-hero', {
     autoplay: {
       delay: 6000,
     },
+    loop: true,
     disableOnInteraction: false,
     slidesPerView: 1,
+  });
+
+  const swiperOffers = new Swiper('.swiper-offers', {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   })
 }
 

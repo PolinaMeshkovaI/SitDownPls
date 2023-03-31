@@ -1,0 +1,180 @@
+.swiper-offers {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	position: static;
+	margin-left: 13px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background: none;
+  z-index: 5;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  background: $primary_light;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: $primary;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background: $primary_shade;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper-button-prev.swiper-button-disabled::before,
+.swiper-button-next.swiper-button-disabled::before {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper-button-next::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 33%;
+  border-bottom: 2px solid $primary;
+  border-right: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper-button-prev::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 39%;
+  border-top: 2px solid $primary;
+  border-left: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper-button-prev:focus::before,
+.swiper-button-next:focus::before {
+  border-color: $light-color
+}
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before {
+  border-color: $light-color
+}
+.swiper-button-prev:active::before,
+.swiper-button-next:active::before {
+  border-color: $light-color
+}
+
+
+.offers {
+  &__container {
+    padding-top: $gap;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+  &__swiper {
+    width: 100%;
+  }
+  &__slide {
+    width: 23.125%;
+    height: 100%;
+    &--big{
+      width: 48.75%;
+    }
+  }
+  &__card {
+    position: relative;
+    padding: 30px;
+    height: 100%;
+    background: $grey_light;
+    border-radius: 10px;
+  }
+}
+.card {
+  min-height: 460px;
+  &__discount {
+    position: absolute;
+    display: flex;
+    width: 92px;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $light-color;
+    background-image: url(../../img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 250px;
+    margin-bottom: 19px;
+  }
+  &__subtitle {
+    margin-bottom: 19px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__inner {
+    margin-bottom: 23px;
+  }
+  &__price:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__price {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: $secondary;
+    &--old {
+      color: $grey;
+      text-decoration: line-through;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

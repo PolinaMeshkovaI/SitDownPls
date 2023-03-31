@@ -1,9 +1,9 @@
-// если вы хотите использовать sass-переменные - удалите root
-// colors
+
 $font-family: "Open Sans", sans-serif;
 $content-width: 1920px;
 $container-offset: 320px;
 $container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+$gap: 69px;
 
 // colors
 $light-color: #fff;
