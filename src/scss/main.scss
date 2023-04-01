@@ -4,8 +4,13 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// подключение компонентов страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/offers";
+@import "./components/high-rating";
+@import "./components/oxford";
+@import "./components/categories";
 
+// подключение маленьких компонентов страницы
+@import "./components/card";

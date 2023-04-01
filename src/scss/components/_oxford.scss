@@ -1,0 +1,33 @@
+.oxford {
+  background-image: url(../../img/bg-oxford.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__container {
+    display: flex;
+    min-height: 600px;
+    padding-top: 154px;
+    padding-bottom: 150px;
+    flex-direction: column;
+    align-items: start;
+  }
+  &__title {
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    color: $gold;
+  }
+  &__descr {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: $light-color;
+  }
+  &__btn {
+    background: $primary;
+    color: $light-color;
+  }
+}

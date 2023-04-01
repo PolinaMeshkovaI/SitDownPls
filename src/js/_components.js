@@ -5,3 +5,5 @@ castomChoicesProduct();
 import { swiper } from "./components/swiper_hero";
 swiper();
 
+import { showMore } from "./components/show-more";
+showMore();

@@ -67,7 +67,6 @@ a {
     display: none;
   }
 }
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -77,6 +76,9 @@ a {
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
+}
+.is-visible {
+  display: block;
 }
 
 .container {
@@ -89,9 +91,9 @@ a {
   outline: none;
 }
 
-.centered {
-  text-align: center;
-}
+// .centered {
+//   text-align: center;
+// }
 
 .dis-scroll {
   position: fixed;
@@ -107,11 +109,11 @@ a {
   position: relative;
 }
 
-.nav-desc {
-  font-size: 14px;
-  line-height: 100%;
-  color: $grey;
-}
+// .nav-desc {
+//   font-size: 14px;
+//   line-height: 100%;
+//   color: $grey;
+// }
 
 .title {
   margin: 0;
