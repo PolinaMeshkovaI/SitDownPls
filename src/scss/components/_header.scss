@@ -180,7 +180,7 @@
       &:active {
         color: $primary_shade;
         background-color: none;
-    }
+      }
   }
   &__item:not(:last-child) {
     margin-right: 92px;
@@ -223,11 +223,9 @@
         display: block;
         top: calc(100% - 10px);
         padding-top: 30px;
-
         &.is-active {
           border: 2px solid $grey_light;
           border-top-width: 0;
-
         }
         & .choices__placeholder {
           display: none;
@@ -235,7 +233,7 @@
         & .choices__item--selectable {
           padding-left: 30px;
           padding-bottom: 10px;
-      }
+        }
       }
     }
     &[data-type*=select-one] .choices__inner {

@@ -1,0 +1,135 @@
+.categories {
+  &__container {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+  }
+  &__item {
+    padding: 30px;
+    background: $grey-light;
+    border-radius: 10px;
+    &--1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    &--2 {
+      grid-column-start: 4;
+      grid-column-end: 7;
+    }
+    &--3 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &--4 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+    &--5 {
+      grid-column-start: 5;
+      grid-column-end: 7;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+  &__bg {
+    position: relative;
+    margin-bottom: 30px;
+    min-height: 306px;
+    left: -30px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &--1 {
+      background-image: url(../../img/categories_sofa.png);
+    }
+    &--2 {
+      background-image: url(../../img/categories_armchair.png);
+    }
+    &--3 {
+      min-height: 202px;
+      background-image: url(../../img/categories_bed.png);
+    }
+    &--4 {
+      min-height: 202px;
+      background-image: url(../../img/categories_dresser.png);
+    }
+    &--5 {
+      min-height: 202px;
+      background-image: url(../../img/categories_chair.png);
+    }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    // padding-right: 5px;
+    color: $primary;
+    font-weight: 700;
+    line-height: 120%;
+    transition: border-bottom 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:focus {
+      border-bottom: 2px solid $primary;
+    }
+    &:focus::before {
+      background: $primary-light;
+    }
+    &:focus::after {
+      border-color: $light-color;
+    }
+    &:hover {
+      border-bottom: 2px solid $primary;
+    }
+    &:hover::before {
+      background: $primary;
+    }
+    &:hover::after {
+      border-color: $light-color;
+    }
+    &:active {
+      border-color: $primary-shade;
+      color: $primary-shade;
+    }
+    &:active::before {
+      background: $primary-shade;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      right: -27px;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      background: none;
+      z-index: 5;
+      transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 34%;
+      right: -18px;
+      border-bottom: 2px solid $primary;
+      border-right: 2px solid $primary;
+      transform: rotate(-45deg);
+      z-index: 5;
+      transition: border-color 0.3s ease-in-out;
+    }
+  }
+}
+.catalog {
+  display: flex;
+  margin-bottom: 14px;
+  &__item:not(:last-child) {
+    margin-right: 22px;
+  }
+  &__link {
+    color: $grey;
+  }
+}
