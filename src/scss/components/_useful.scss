@@ -1,0 +1,174 @@
+.swiper-useful {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper2-button-prev,
+.swiper2-button-next {
+	position: static;
+	margin-left: 13px;
+}
+.swiper2-button-prev::after,
+.swiper2-button-next::after {
+  display: none;
+}
+.swiper2-button-next,
+.swiper2-button-prev {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background: none;
+  z-index: 5;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.swiper2-button-next:focus,
+.swiper2-button-prev:focus {
+  background: $primary_light;
+}
+.swiper2-button-next:hover,
+.swiper2-button-prev:hover {
+  background: $primary;
+}
+.swiper2-button-next:active,
+.swiper2-button-prev:active {
+  background: $primary_shade;
+}
+.swiper2-button-prev.swiper-button-disabled,
+.swiper2-button-next.swiper-button-disabled {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper2-button-prev.swiper-button-disabled::before,
+.swiper2-button-next.swiper-button-disabled::before {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper2-button-next::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 33%;
+  border-bottom: 2px solid $primary;
+  border-right: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper2-button-prev::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 39%;
+  border-top: 2px solid $primary;
+  border-left: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper2-button-prev:focus::before,
+.swiper2-button-next:focus::before {
+  border-color: $light-color
+}
+.swiper2-button-prev:hover::before,
+.swiper2-button-next:hover::before {
+  border-color: $light-color
+}
+.swiper2-button-prev:active::before,
+.swiper2-button-next:active::before {
+  border-color: $light-color
+}
+.swiper-wrapper {
+  height: auto;
+  box-sizing: border-box;
+}
+.swiper-slide {
+  height: auto;
+}
+
+.useful {
+  padding-bottom: 70px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    display: flex;
+    align-items: top;
+  }
+  &__swiper {
+    width: 100%;
+  }
+  &__slide {
+    height: 100%;
+  }
+  &__card {
+    padding: 460px 30px 30px 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background-color: $grey_light;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 425px;
+    border-radius: 10px;
+    &--img1 {
+      background-image: url(../../img/useful_slide1.jpg);
+    }
+    &--img2 {
+      background-image: url(../../img/useful_slide2.jpg);
+    }
+    &--img3 {
+      background-image: url(../../img/useful_slide3.jpg);
+    }
+    &--img4 {
+      background-image: url(../../img/useful_slide4.jpg);
+    }
+    &--img5 {
+      background-image: url(../../img/useful_slide5.jpg);
+    }
+  }
+  &__descr {
+    margin: 0;
+    margin-bottom: 37px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+  }
+  &__button {
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:focus-visible {
+      background: $primary_light;
+      border: 2px solid $primary_shade;
+      color: $light-color;
+    }
+    &:hover {
+      background: $primary;
+      color: $light-color;
+    }
+    &:active {
+      background: $primary_shade;
+      color: $light-color;
+      border-color: $primary_shade;
+    }
+    &:disabled {
+      background: $md_grey;
+      color: $grey;
+    }
+  }
+}

@@ -36,7 +36,7 @@
     color: $light-color;
     background: $primary;
     border-radius: 10px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     &:focus {
       background: $primary_light;
       border: 2px solid $primary_shade;
