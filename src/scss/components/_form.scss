@@ -1,0 +1,79 @@
+.form {
+  width: 100%;
+  &__wrapper {
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 7px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    background: $grey_light;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+    &::placeholder {
+      color: $grey;
+      // opacity: 1;
+    }
+    &:focus-visible  {
+      background: $pink_light;
+      outline: 1px solid $primary;
+    }
+    &:hover {
+      background: $md_grey;
+      border: none;
+    }
+    &:active  {
+      background: $md_grey;
+      outline: 1px solid $green_input;
+    }
+  }
+  &__btn {
+    margin-bottom: 12px;
+  }
+  &__checkbox:checked~.form__descr::before {
+      background: $primary;
+      border-color: $primary;
+  }
+  &__checkbox:checked~.form__descr::after {
+    opacity: 1;
+}
+  &__descr {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    cursor: pointer;
+    &--link {
+      color: $primary;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: 5px;
+      top: 3px;
+      border: 1px solid $grey;
+      border-radius: 2px;
+      transition: background 0.3 ease-in-out, border-color 0.3 ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 7px;
+      top: 6px;
+      background-image: url(../../img/check.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
