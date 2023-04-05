@@ -1,6 +1,7 @@
 .form {
   width: 100%;
   &__wrapper {
+    position: relative;
     width: 100%;
   }
   &__input {
@@ -16,7 +17,6 @@
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     &::placeholder {
       color: $grey;
-      // opacity: 1;
     }
     &:focus-visible  {
       background: $pink_light;
@@ -32,7 +32,18 @@
     }
   }
   &__btn {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    transition: background 0.3 ease-in-out, border 0.3 ease-in-out;
+    &:focus {
+      background: $primary_light;
+      border: 2px solid $primary_shade;
+    }
+    &:hover {
+      background: $primary_light;
+    }
+    &:active {
+      background: $primary_shade;
+    }
   }
   &__checkbox:checked~.form__descr::before {
       background: $primary;
@@ -76,4 +87,16 @@
       transition: opacity 0.3s ease-in-out;
     }
   }
+}
+.invalid-contacts {
+  outline: 1px solid $red_input;
+}
+.feedback-error-label {
+  position: absolute;
+  top: -17px;
+  left: 17px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  z-index: 100;
 }

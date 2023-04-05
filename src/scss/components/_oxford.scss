@@ -26,4 +26,20 @@
     line-height: 120%;
     color: $light-color;
   }
+  &__btn {
+    &:focus {
+      background: $primary_light;
+      border: 2px solid $primary_shade;
+    }
+    &:hover {
+      background: $primary_light;
+    }
+    &:active {
+      background: $primary_shade;
+    }
+    &:disabled {
+      background: $md_grey;
+      color: $grey;
+    }
+  }
 }

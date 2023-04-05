@@ -1,4 +1,7 @@
 .feedback {
+  &__title {
+    margin-bottom: 9px;
+  }
   &__wrapper {
     display: flex;
   }
@@ -10,6 +13,7 @@
     align-items: start;
   }
   &__descr {
+    display: inline-block;
     margin: 0;
     margin-bottom: 15px;
     font-weight: 400;
@@ -17,15 +21,41 @@
     line-height: 19px;
     color: $grey_shade;
   }
+  &__tooltip {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    font-weight: 700;
+    color: $secondary;
+    border-radius: 50%;
+    border: 2px solid $secondary;
+    transition: color 0.3 ease-in-out, background-color 0.3 ease-in-out;
+    &:hover {
+      color: $light-color;
+      background-color: $secondary;
+    }
+  }
+  &__mark {
+    width: 14px;
+    height: 14px;
+    fill: $secondary;
+  }
   &__form {
     width: 100%;
   }
   &__right {
+    position: relative;
+    top: -17px;
     width: 50%;
     background-image: url(../../img/feedback.svg);
-    background-position: center;
+    background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+.tippy-box {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 14px;
 }
 
