@@ -37,7 +37,7 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
 }
 
 .btn-reset {
@@ -105,9 +105,9 @@ a {
   overscroll-behavior: none;
 }
 
-.page--ios .dis-scroll {
-  position: relative;
-}
+// .page--ios .dis-scroll {
+//   position: relative;
+// }
 
 // .nav-desc {
 //   font-size: 14px;

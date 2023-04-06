@@ -1,0 +1,58 @@
+.footer {
+  &__container {
+    display: flex;
+    padding-top: 27px;
+    padding-bottom: 19px;
+    justify-content: space-between;
+    background-color: $md_grey;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link-logo {
+    display: inline-block;
+    margin-bottom: 28px;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__col:not(:last-child) {
+    margin-right: 130px;
+  }
+  &__subtitle {
+    margin-bottom: 5px;
+    padding-top: 3px;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $grey;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:focus {
+        color: $primary_shade;
+        background-color: $pink_violet;
+      }
+      &:hover {
+        color: $primary_light;
+        background-color: none;
+      }
+      &:active {
+        color: $primary_shade;
+        background-color: none;
+      }
+  }
+  &__bottom {
+    padding: 5px 0;
+    text-align: center;
+  }
+  &__copy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $grey;
+  }
+}

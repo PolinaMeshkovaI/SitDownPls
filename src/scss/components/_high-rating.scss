@@ -1,17 +1,21 @@
 .high-rating {
   &__container {
-    padding-top: 65px;
+    padding-top: 61px;
     padding-bottom: 66px;
-  }
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-    margin-bottom: 34px;
   }
   &__btn {
     margin: 0 auto;
     font-weight: 700;
+    &:focus {
+      background: $primary_light;
+      border: 2px solid $primary_shade;
+    }
+    &:hover {
+      background: $primary_light;
+    }
+    &:active {
+      background: $primary_shade;
+    }
     &:disabled {
       cursor: default;
       background-color: $grey_light;

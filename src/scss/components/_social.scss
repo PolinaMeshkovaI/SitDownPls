@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  &__img {
+    width: 30px;
+    height: 30px;
+    fill: $grey;
+    transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out  ;
+    &:hover {
+      fill: $primary;
+    }
+    &:active {
+      fill: $primary_shade;
+      background-color: none;
+    }
+  }
+  &__link:focus-visible {
+    outline: none;
+  }
+  &__link:focus-visible .social__img {
+    fill: $light-color;
+    background-color: $primary_light;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+}

@@ -100,7 +100,7 @@
 }
 
 .useful {
-  padding-bottom: 58px;
+  padding-bottom: 64px;
   &__top {
     display: flex;
     justify-content: space-between;
@@ -151,6 +151,7 @@
     line-height: 33px;
   }
   &__button {
+    padding: 16px 33px;
     transition: background 0.3s ease-in-out, border 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
     &:focus-visible {
       background: $primary_light;

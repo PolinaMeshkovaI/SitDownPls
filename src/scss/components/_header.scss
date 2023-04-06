@@ -1,15 +1,24 @@
 .header {
+  &__container {
+    padding: 0;
+  }
   &__top {
     @include flex-all-sb;
-    padding: 2px 0;
+    padding: 4px 320px;
+    background-color: $grey_light
   }
   &__center {
     @include flex-all-sb;
-    padding: 34px 0;
+    padding-top: 32px;
+    padding-bottom: 30px;
+    padding-left: 320px;
+    padding-right: 320px
   }
   &__bottom {
     @include flex-all-sb;
     padding-bottom: 65px;
+    padding-left: 320px;
+    padding-right: 320px
   }
   &__search {
     position: relative;
@@ -23,8 +32,8 @@
   }
   &__select {
     @include flex-all-sb;
-    margin-right: 17px;
-    font-size: 16px;
+    // margin-right: 17px;
+    font-size: 19px;
     line-height: 120%;
     color: $black;
   }
@@ -74,6 +83,9 @@
       &--dropdown {
       padding: 16px;
       }
+      &--single {
+        padding-bottom: 0;
+      }
     }
     &__item {
       &--selectable {
@@ -100,24 +112,27 @@
   &__tel {
     transition: background-color 0.3s ease-in-out;
     &:hover {
+      background-color: none;
+    }
+    &:focus-visible {
       background-color: $bone;
     }
     &:active{
       background-color: none;
     }
-    &:focus a {
+    &:hover a {
       color: $secondary_light;
     }
-    &:hover a {
+    &:focus a {
         color: $secondary;
     }
     &:active a {
         color: $secondary_shade;
     }
-    &:focus svg{
+    &:hover svg{
       fill: $secondary_light;
     }
-    &:hover svg{
+    &:focus svg{
         fill: $secondary;
     }
     &:active svg{
@@ -132,6 +147,10 @@
       margin-right: 64px;
     }
     &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      color: $grey;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
       &:focus {
         color: $primary_shade;
@@ -345,7 +364,7 @@
     position: relative;
     width: 100%;
     min-width: 761px;
-    padding: 18px 0;
+    padding: 20px 0;
     padding-left: 60px;
     padding-right: 65px;
     background-color: $grey_light;

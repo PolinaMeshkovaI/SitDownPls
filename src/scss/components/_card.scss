@@ -1,18 +1,26 @@
 .card {
-  position: relative;
-  padding: 30px;
-  min-height: 460px;
-  height: 100%;
-  background: $grey_light;
-  border-radius: 10px;
-  &--rating {
-    padding: 0;
-    min-height: 420px;
-    &:nth-child(n + 9) {
-      display: none;
-    }
-    &.is-visible {
-      display: block;
+  &--rating{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 34px;
+  }
+  &__item{
+    position: relative;
+    padding: 30px;
+    min-height: 460px;
+    height: 100%;
+    background: $grey_light;
+    border-radius: 10px;
+    &--rating {
+      padding: 0;
+      min-height: 420px;
+      &:nth-child(n + 9) {
+        display: none;
+      }
+      &.is-visible {
+        display: block;
+      }
     }
   }
   &__sticker {
@@ -23,7 +31,7 @@
     justify-content: center;
     align-items: center;
     left: 0;
-    top: 30px;
+    top: 32px;
     font-weight: 700;
     font-size: 14px;
     color: $light-color;
@@ -39,23 +47,23 @@
       left: 5px;
       top: 27px;
     }
-    &--star {
-      margin-right: 5px;
-    }
+  }
+  &__star {
+    margin-right: 5px;
   }
   &__top {
     display: flex;
     justify-content: center;
     align-items: end;
     min-height: 250px;
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     &--rating {
       min-height: 195px;
+      margin-bottom: 18px;
     }
   }
   &__bottom {
     display: flex;
-    // height: 50%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -98,5 +106,22 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+  &__btn {
+    transition: background-color 0.3s ease-in-out, border 0.3 ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    &:focus-visible {
+      background-color: $primary_light;
+      border: 2px solid $primary_shade;
+      color: $light-color;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $light-color;
+    }
+    &:active {
+      background-color: $primary_shade;
+      color: $light-color;
+      border-color: $primary_shade;
+    }
   }
 }

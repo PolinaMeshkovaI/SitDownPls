@@ -6,7 +6,7 @@
   }
   &__input {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     padding: 7px 16px;
     font-weight: 400;
     font-size: 16px;
@@ -51,7 +51,13 @@
   }
   &__checkbox:checked~.form__descr::after {
     opacity: 1;
-}
+  }
+  &__check {
+    &:focus-visible~.form__descr::before{
+      background: $pink_light;
+      outline: 1px solid $primary;
+    }
+  }
   &__descr {
     position: relative;
     padding-left: 25px;
@@ -59,9 +65,6 @@
     font-size: 14px;
     line-height: 19px;
     cursor: pointer;
-    &--link {
-      color: $primary;
-    }
     &::before {
       content: "";
       position: absolute;
@@ -86,6 +89,9 @@
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
+  }
+  &__link {
+    color: $primary;
   }
 }
 .invalid-contacts {
