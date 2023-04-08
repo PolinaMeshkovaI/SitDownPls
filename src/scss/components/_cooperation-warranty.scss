@@ -1,0 +1,38 @@
+.cooperation-warranty {
+  margin-bottom: 68px;
+  &__list {
+    margin-bottom: 32px;
+    padding: 0;
+    list-style: none;
+    counter-reset: list-numbers;
+  }
+  &__item {
+    position: relative;
+    padding-left: 26px;
+    &::before {
+      counter-increment: list-numbers;
+      content: counter(list-numbers)".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      text-align: left;
+      color: $secondary;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &__text {
+    display: inline-block;
+    max-width: 624px;
+    padding: 22px 0 22px 110px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    background-image: url(../../img/pencil.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

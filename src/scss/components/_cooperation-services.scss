@@ -1,0 +1,22 @@
+.cooperation-services {
+  &__descr {
+    max-width: 625px;
+    padding-left: 35px;
+    line-height: 150%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    &--1 {
+      background-image: url(../../img/network.svg);
+    }
+    &--2 {
+      background-image: url(../../img/briefcase.svg);
+    }
+    &--3 {
+      background-image: url(../../img/git-pull-request.svg);
+    }
+  }
+  &__descr:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}

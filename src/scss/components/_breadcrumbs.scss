@@ -1,0 +1,27 @@
+.breadcrumbs {
+  margin-top: 19px;
+  margin-bottom: 30px;
+  display: flex;
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &:not(:last-child)::after {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      color: $grey;
+    }
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $grey;
+  }
+}

@@ -85,15 +85,15 @@ a {
   margin: 0 auto;
   padding: 0 $container-offset;
   max-width: $container-width;
+  &--cooperation {
+    padding-right: 758px;
+    margin-bottom: 34px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
-
-// .centered {
-//   text-align: center;
-// }
 
 .dis-scroll {
   position: fixed;
@@ -105,23 +105,12 @@ a {
   overscroll-behavior: none;
 }
 
-// .page--ios .dis-scroll {
-//   position: relative;
-// }
-
-// .nav-desc {
-//   font-size: 14px;
-//   line-height: 100%;
-//   color: $grey;
-// }
-
 .title {
   margin: 0;
   margin-bottom: 24px;
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
-  color: $black;
 }
 
 .subtitle {
@@ -129,6 +118,17 @@ a {
   font-weight: 400;
   font-size: 24px;
   line-height: 130%;
+  &--cooperation {
+    margin-bottom: 12px;
+  }
+}
+
+.descr {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: $grey_shade;
 }
 
 .btn {

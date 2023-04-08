@@ -16,7 +16,6 @@
   }
   &__bottom {
     @include flex-all-sb;
-    padding-bottom: 65px;
     padding-left: 320px;
     padding-right: 320px
   }
@@ -103,31 +102,25 @@
     fill: $secondary;
     transition: fill 0.3s ease-in-out;
   }
-  &__tel a {
+  &__link {
+    display: flex;
+    height: 22px;
+    align-items: center;
     font-size: 14px;
     line-height: 100%;
     color: $secondary;
-    transition: color 0.3s ease-in-out;
-  }
-  &__tel {
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     &:hover {
       background-color: none;
+      color: $secondary_light;
     }
     &:focus-visible {
       background-color: $bone;
+      color: $secondary;
     }
     &:active{
       background-color: none;
-    }
-    &:hover a {
-      color: $secondary_light;
-    }
-    &:focus a {
-        color: $secondary;
-    }
-    &:active a {
-        color: $secondary_shade;
+      color: $secondary_shade;
     }
     &:hover svg{
       fill: $secondary_light;
@@ -389,17 +382,59 @@
     bottom: 16px;
     fill: $grey;
   }
-  &__img {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    fill: none;
-    stroke: $primary;
-  }
   &__btn {
     position: absolute;
+    width: 32px;
+    height: 32px;
     right: 32px;
     bottom: 10px;
+    &:hover::before {
+     border-color: $light-color;
+    }
+    &:focus-visible::before {
+      border-color: $light-color;
+    }
+    &:active::before {
+      border-color: $light-color;
+    }
+    &:hover::after {
+      background: $primary;
+    }
+    &:focus-visible::after {
+      background: $primary_light;
+    }
+    &:active::after {
+      background: $primary_shade;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 0;
+      left: 0;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      background: none;
+      z-index: 4;
+      transition: background 0.3s ease-in-out;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 35%;
+      bottom: 50%;
+      right: 50%;
+      left: 33%;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      border-color: $primary;
+      transform: rotate(-45deg);
+      z-index: 5;
+      transition: border-color 0.3s ease-in-out;
+    }
   }
 }
 
