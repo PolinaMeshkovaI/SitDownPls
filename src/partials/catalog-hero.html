@@ -1,0 +1,42 @@
+<div class="container catalog-hero">
+  <ol class="breadcrumbs breadcrumbs--catalog list-reset">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">
+        Главная
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">
+        Каталог
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">
+        Диваны
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">
+        Прямые диваны
+      </a>
+    </li>
+  </ol>
+  <div class="catalog-hero__wrapper">
+    <div class="catalog-hero__filters">
+      @include('catalog-filters.html')
+    </div>
+    <div class="catalog-hero__container">
+      <h2 class="catalog-hero__title subtitle">
+        Каталог
+      </h2>
+      <ul class="catalog-hero__list list-reset">
+        @include('cards.html')
+      </ul>
+      <div class="catalog-hero__btn tabs">
+				<button class="tabs__btn tabs__btn--first" aria-label="Первая страница каталога"></button>
+				<button class="tabs__btn tabs__btn--second" aria-label="Вторая страница каталога"></button>
+			</div>
+    </div>
+  </div>
+</div>
+

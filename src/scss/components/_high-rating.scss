@@ -3,6 +3,22 @@
     padding-top: 61px;
     padding-bottom: 66px;
   }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 34px;
+    & .card {
+      padding: 0;
+      min-height: 420px;
+      &:nth-child(n + 9) {
+        display: none;
+      }
+      &.is-visible {
+        display: block;
+      }
+    }
+  }
   &__btn {
     margin: 0 auto;
     font-weight: 700;

@@ -2,14 +2,15 @@ import JustValidate from 'just-validate';
 
 export const validation = () => {
   document.addEventListener("DOMContentLoaded", function () {
-    const validation = new JustValidate('.form', {
+    const form = document?.querySelector('.form');
+    if (form) {
+      const validation = new JustValidate('.form', {
         errorLabelStyle: {
             color: '#FF6972'
         },
         errorFieldCssClass: ['invalid'],
         errorLabelCssClass: ['feedback-error-label'],
     });
-
     validation
       .addField('#name', [{
             rule: 'minLength',
@@ -64,6 +65,7 @@ export const validation = () => {
           errorMessage: "Недопустимый формат",
         },
       ]);
+    }
     });
 }
 

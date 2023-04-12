@@ -96,6 +96,10 @@
   &__container {
     padding-top: 65px;
   }
+  &__card {
+    min-height: 460px;
+    padding: 30px;
+  }
   &__top {
     position: relative;
     display: flex;

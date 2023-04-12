@@ -13,3 +13,6 @@ validation();
 
 import { tooltip } from "./components/tooltip";
 tooltip();
+
+import { rangeSlider } from "./components/range-slider";
+rangeSlider();
