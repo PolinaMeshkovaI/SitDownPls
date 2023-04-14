@@ -1,0 +1,29 @@
+.oxford-banner {
+  min-height: 360px;
+  &__img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 30px;
+    background-color: $black;
+    border-radius: 0px 0px 10px 10px;
+  }
+  &__title {
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: $gold;
+  }
+  &__descr {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey;
+  }
+}

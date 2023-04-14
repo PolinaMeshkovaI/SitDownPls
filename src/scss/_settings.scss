@@ -144,3 +144,62 @@ a {
     color: $light-color;
   }
 }
+
+.arrow-link {
+  position: relative;
+  display: inline-block;
+  color: $primary;
+  font-weight: 700;
+  line-height: 120%;
+  transition: border-bottom 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:focus {
+    border-bottom: 2px solid $primary;
+  }
+  &:focus::before {
+    background: $primary-light;
+  }
+  &:focus::after {
+    border-color: $light-color;
+  }
+  &:hover {
+    border-bottom: 2px solid $primary;
+  }
+  &:hover::before {
+    background: $primary;
+  }
+  &:hover::after {
+    border-color: $light-color;
+  }
+  &:active {
+    border-color: $primary-shade;
+    color: $primary-shade;
+  }
+  &:active::before {
+    background: $primary-shade;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: -27px;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    background: none;
+    z-index: 5;
+    transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 34%;
+    right: -18px;
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
+    transform: rotate(-45deg);
+    z-index: 5;
+    transition: border-color 0.3s ease-in-out;
+  }
+}

@@ -16,3 +16,6 @@ tooltip();
 
 import { rangeSlider } from "./components/range-slider";
 rangeSlider();
+
+import { tabsBtn } from "./components/tabs-btn";
+tabsBtn();

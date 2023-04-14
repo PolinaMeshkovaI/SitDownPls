@@ -3198,6 +3198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
 /* harmony import */ var _components_tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tooltip */ "./src/js/components/tooltip.js");
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
+/* harmony import */ var _components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs-btn */ "./src/js/components/tabs-btn.js");
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
@@ -3211,6 +3212,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_tooltip__WEBPACK_IMPORTED_MODULE_4__.tooltip)();
 
 (0,_components_range_slider__WEBPACK_IMPORTED_MODULE_5__.rangeSlider)();
+
+(0,_components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__.tabsBtn)();
 
 /***/ }),
 
@@ -3494,6 +3497,48 @@ const swiper = () => {
     navigation: {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev'
+    }
+  });
+};
+
+/***/ }),
+
+/***/ "./src/js/components/tabs-btn.js":
+/*!***************************************!*\
+  !*** ./src/js/components/tabs-btn.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "tabsBtn": () => (/* binding */ tabsBtn)
+/* harmony export */ });
+const tabsBtn = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelector('.tabs');
+    const tabsBtn = document.querySelectorAll('.tabs__btn');
+    const tabsContent = document.querySelectorAll('.tabs__content');
+    if (tabs) {
+      tabs.addEventListener('click', e => {
+        if (e.target.classList.contains('tabs__btn')) {
+          const tabsPath = e.target.dataset.tabsPath;
+          let tabsItem = document.querySelectorAll(`[data-tabs-target="${tabsPath}"]`);
+          let tabsBtnActive = document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`);
+          tabsContent.forEach(el => {
+            el.classList.remove('tabs__content--active');
+          });
+          tabsItem.forEach(el => {
+            el.classList.add('tabs__content--active');
+          });
+          tabsBtn.forEach(el => {
+            el.classList.remove('tabs__btn--active');
+          });
+          tabsBtnActive.forEach(el => {
+            el.classList.add('tabs__btn--active');
+          });
+        }
+      });
     }
   });
 };
