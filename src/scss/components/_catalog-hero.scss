@@ -1,11 +1,13 @@
 .catalog-hero {
-  margin-bottom: 70px;
+  &__container {
+    margin-bottom: 70px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
   }
-  &__container {
+  &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-start: 2;

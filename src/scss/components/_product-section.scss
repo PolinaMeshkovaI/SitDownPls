@@ -1,0 +1,46 @@
+.product-section {
+  margin-bottom: 81px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 14px;
+  }
+  &__rating {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: $secondary;
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__descr {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 21px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $grey;
+  }
+  &__price {
+    margin-bottom: 19px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: $black;
+  }
+  &__btn {
+    margin-bottom: 12px;
+  }
+  &__link {
+    margin-left: 30px;
+  }
+}

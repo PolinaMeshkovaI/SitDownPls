@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SitDownPls</title>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/playfair_display_black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/playfair_display_black.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container header__container">
+    <div class="header__top top">
+      <div class="top__contacts">
+        <form class="top__select">
+          <label for="city-select">Ваш регион:</label>
+          <select name="city" id="city-select"  class="top__select choices">
+            <option value="moscow">Москва</option>
+            <option value="kazan">Казань</option>
+            <option value="ufa">Уфа</option>
+            <option value="perm">Пермь</option>
+          </select>
+        </form>
+        <span class="top__tel">
+          <a href=”tel:+74958854547” class="top__link">
+            <svg class="top__img">
+              <use xlink:href="img/sprite.svg#call"></use>
+            </svg>
+            +7 495 885-45-47</a>
+        </span>
+      </div>
+      <div class="top__menu menu">
+        <ul class="menu__list list-reset">
+         <li class="menu__item">
+          <a href="#" class="menu__link nav-desc">О компании</a>
+        </li>
+         <li class="menu__item">
+          <a href="#" class="menu__link nav-desc">Гарантия и возврат</a>
+        </li>
+         <li class="menu__item">
+          <a href="#" class="menu__link nav-desc">Корпоративным клиентам</a>
+        </li>
+         <li class="menu__item">
+          <a href="#" class="menu__link nav-desc">Дизайн-решение</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+    <div class="header__center">
+      <a href="#" class="header__link">
+        <img src="../img/logo.svg" alt="Логотип" class="header__logo">
+      </a>
+      <nav class="header__nav nav" title="">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Магазины</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Шоу-рум</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Дисконт</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__bottom bottom">
+      <div class="bottom__wrapper">
+        <form action="#" class="header__search search">
+          <label class="search__label">
+            <input type="search" name="Поиск" class="input-reset search__input" placeholder="Я хочу купить...">
+            <svg class="search__pic">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </label>
+          <button class="btn-reset search__btn">
+          </button>
+        </form>
+        <form class="bottom__select">
+          <select name="city" id="product-select"  class="bottom__select choices">
+            <option value="">Категория</option>
+            <option value="sofas">Диваны</option>
+            <option value="armchairs">Кресла</option>
+            <option value="puffs">Пуфы</option>
+            <option value="beds">Кровати</option>
+            <option value="cabinets">Тумбы</option>
+            <option value="dressers">Комоды</option>
+            <option value="chairs">Стулья</option>
+            <option value="tables">Столы</option>
+            <option value="accessories">Аксессуары</option>
+          </select>
+        </form>
+      </div>
+      <div class="bottom__right">
+        <a href="#" class="bottom__link">
+          <svg class="bottom__right bottom__right--use">
+            <use xlink:href="img/sprite.svg#user"></use>
+          </svg>
+        </a>
+        <a href="#" class="bottom__link">
+          <span class="bottom__counter">0</span>
+         <svg class="bottom__right bottom__right--cart">
+           <use xlink:href="img/sprite.svg#shop_cart"></use>
+         </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <main class="main">
+        <section class="product-section">
+  <div class="container product-section__container">
+    <ol class="breadcrumbs list-reset">
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">
+          Главная
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">
+         Каталог
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">
+          Диваны
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">
+         Прямые диваны
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">
+          D-31
+        </a>
+      </li>
+    </ol>
+    <div class="product-section__wrapper">
+      <div class="product-section__picture product-picture">
+        <div class="product-picture__top">
+          <picture>
+            <source srcset="../img/D-31-maxi.webp" type="image/webp">
+            <img loading="lazy" src="../img/D-31-maxi.png" class="product-picture__img" width="624" height="245" alt="диван d-31">
+          </picture>
+        </div>
+        <div class="product-picture__bottom">
+          <picture>
+            <source srcset="../img/D-31-maxi-1.webp" type="image/webp">
+            <img loading="lazy" src="../img/D-31-maxi-1.png" class="product-picture__item" width="123" height="61" alt="диван d-31">
+          </picture>
+          <picture>
+            <source srcset="../img/D-31-maxi-2.webp" type="image/webp">
+            <img loading="lazy" src="../img/D-31-maxi-2.png" class="product-picture__item" width="66" height="61" alt="диван d-31">
+          </picture>
+          <picture>
+            <source srcset="../img/D-31-maxi-3.webp" type="image/webp">
+            <img loading="lazy" src="../img/D-31-maxi-3.png" class="product-picture__item" width="134" height="61" alt="диван d-31">
+          </picture>
+          <picture>
+            <source srcset="../img/D-31-maxi-4.webp" type="image/webp">
+            <img loading="lazy" src="../img/D-31-maxi-4.png" class="product-picture__item" width="137" height="61" alt="диван d-31">
+          </picture>
+        </div>
+      </div>
+      <div class="product-section__info">
+        <span class="product-section__rating">
+          <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+          4,8
+        </span>
+        <h1 class="product-section__title subtitle">
+          Диван тканевый прямой «D-31»
+        </h1>
+        <p class="product-section__descr">
+          Мини 120 см без ящика Stark синий (Рогожка)
+        </p>
+        <span class="product-section__price">
+          28 490 руб
+        </span>
+        <button class="product-section__btn btn btn--primary">
+          Купить в один клик
+        </button>
+        <a href="#" class="product-section__link">
+          + Добавить в корзину
+        </a>
+      </div>
+      <div class="product-section__mechanics mechanics">
+        <div class="mechanics__wrapper">
+          <h2 class="mechanics__title">
+            Опорный механизм
+          </h2>
+          <p class="mechanics__descr descr">
+            Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.
+          </p>
+          <p class="mechanics__descr descr">
+            Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.
+          </p>
+        </div>
+        <div class="mechanics__images">
+          <picture class="mechanics__img">
+            <source srcset="../img/mechanism-1.webp" type="image/webp">
+            <img loading="lazy" src="../img/mechanism-1.png" width="247" height="113" alt="опорный механизм">
+          </picture>
+          <picture class="mechanics__img">
+            <source srcset="../img/mechanism-2.webp" type="image/webp">
+            <img loading="lazy" src="../img/mechanism-2.png" width="247" height="113" alt="опорный механизм">
+          </picture>
+        </div>
+      </div>
+      <div class="product-section__detail detail">
+        <dl>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Гарантия</span>
+    </dt>
+    <dd class="details__value">
+      18 месяцев
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Артикул</span>
+    </dt>
+    <dd class="details__value">
+      AAA41269004
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Длина</span>
+    </dt>
+    <dd class="details__value">
+      163 см
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Высота</span>
+    </dt>
+    <dd class="details__value">
+      90 см
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Глубина</span>
+    </dt>
+    <dd class="details__value">
+      108 см
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Спальное место</span>
+    </dt>
+    <dd class="details__value">
+      200 см х 125 см
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Высота посадки</span>
+    </dt>
+    <dd class="details__value">
+      45 см
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Механизм</span>
+    </dt>
+    <dd class="details__value">
+      Опорный
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Тип обивки</span>
+    </dt>
+    <dd class="details__value">
+      Рогожка
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Цвет</span>
+    </dt>
+    <dd class="details__value">
+      Синий
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Наполнитель</span>
+    </dt>
+    <dd class="details__value">
+      Независимый пружинный блок
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Материал каркаса</span>
+    </dt>
+    <dd class="details__value">
+      Металл. рама с дерев. латами
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Количество мест</span>
+    </dt>
+    <dd class="details__value">
+      Двухместные
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Категория</span>
+    </dt>
+    <dd class="details__value">
+      Прямые тканевые диваны
+    </dd>
+  </div>
+  <div class="details__inner descr">
+    <dt class="details__key">
+      <span class="details__text">Возврат</span>
+    </dt>
+    <dd class="details__value">
+      Условия
+    </dd>
+  </div>
+</dl>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__left">
+      <a href="#" class="footer__link-logo">
+        <img src="../img/logo.svg" alt="Логотип" class="footer__logo">
+      </a>
+      <ul class="social list-reset">
+  <li class="social__item">
+    <a href="#" target="_blank" class="social__link social__link--fb" aria-label="Наша страничка в Фейсбуке">
+      <svg class="social__img">
+        <use xlink:href="img/sprite.svg#fb"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Наша страничка во Вконтакте">
+      <svg class="social__img">
+        <use xlink:href="img/sprite.svg#vk"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a href="#" target="_blank" class="social__link social__link--ig" aria-label="Наша страничка в Твиттере">
+      <svg class="social__img">
+        <use xlink:href="img/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div class="footer__right">
+      <nav class="footer__nav">
+        <div class="footer__col">
+          <h3 class="footer__subtitle subtitle">
+            О нас
+          </h3>
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                О компании
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Блог
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__subtitle subtitle">
+            Услуги
+          </h3>
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Доставка
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Рассрочка и кредит
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Сборка и установка
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__subtitle subtitle">
+            Связь с нами
+          </h3>
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Обратная связь
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__subtitle subtitle">
+            Сотрудничество
+          </h3>
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Поставщикам
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Оптовикам
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link" target="_blank">
+                Карьера
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span class="footer__copy">
+      SDP® 2011-2021
+    </span>
+  </div>
+</footer>
+
+    </div>
+  </body>
+
+</html>
