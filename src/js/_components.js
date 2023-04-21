@@ -19,3 +19,6 @@ rangeSlider();
 
 import { tabsBtn } from "./components/tabs-btn";
 tabsBtn();
+
+import { modalOneClick } from "./components/modal-buy-in-one-click";
+modalOneClick();

@@ -3199,6 +3199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tooltip */ "./src/js/components/tooltip.js");
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
 /* harmony import */ var _components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs-btn */ "./src/js/components/tabs-btn.js");
+/* harmony import */ var _components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal-buy-in-one-click */ "./src/js/components/modal-buy-in-one-click.js");
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
@@ -3214,6 +3215,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_range_slider__WEBPACK_IMPORTED_MODULE_5__.rangeSlider)();
 
 (0,_components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__.tabsBtn)();
+
+(0,_components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__.modalOneClick)();
 
 /***/ }),
 
@@ -3263,6 +3266,41 @@ const castomChoicesProduct = () => {
   const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
     searchEnabled: false,
     itemSelectText: ""
+  });
+};
+
+/***/ }),
+
+/***/ "./src/js/components/modal-buy-in-one-click.js":
+/*!*****************************************************!*\
+  !*** ./src/js/components/modal-buy-in-one-click.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "modalOneClick": () => (/* binding */ modalOneClick)
+/* harmony export */ });
+const modalOneClick = () => {
+  const modalClick = document.getElementById("modal-one-click");
+  const modalClickClose = document.getElementById("modal-one-click-close");
+  const oneClickBtn = document.getElementById("buy-in-one-click-btn");
+  const modalSuccess = document.getElementById("modal-success");
+  const modalSuccessClose = document.getElementById("modal-success-close");
+  const modalSuccessBtn = document.getElementById("modal-success-btn");
+  oneClickBtn.addEventListener("click", function () {
+    modalClick.classList.add("modal--open");
+  });
+  modalClickClose.addEventListener("click", function () {
+    modalClick.classList.remove("modal--open");
+  });
+  modalSuccessBtn.addEventListener("click", function () {
+    modalClick.classList.remove("modal--open");
+    modalSuccess.classList.add("modal--open");
+  });
+  modalSuccessClose.addEventListener("click", function () {
+    modalSuccess.classList.remove("modal--open");
   });
 };
 

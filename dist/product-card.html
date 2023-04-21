@@ -131,6 +131,59 @@
 </header>
 
       <main class="main">
+        <section class="modal"  id="modal-one-click">
+  <div class="container modal__container">
+    <div class="modal__box">
+      <button class="modal__close btn-reset">
+        <svg class="modal__img" id="modal-one-click-close">
+          <use xlink:href="img/sprite.svg#exit"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title title">
+        Купить в один клик
+      </h2>
+      <p class="modal__descr">
+        Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
+      </p>
+      <form action="POST" class="modal__form form">
+        <div class="form__wrapper">
+            <input type="text" class="form__input" name="name" placeholder="Как вас зовут?" id="name" required>
+        </div>
+        <div class="form__wrapper">
+          <input type="tel" class="form__input" name="tel" placeholder="Ваш телефон" id="tel" required>
+        </div>
+        <div class="form__bottom">
+          <button class="btn btn--primary form__btn btn-reset" id="modal-success-btn">Отправить</button>
+          <label for="checkbox" class="form__check">
+            <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" required>
+            <span class="form__descr">
+              Принимаю
+              <a href="#" class="form__link">пользовательское соглашение</a>
+            </span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+        <section class="modal"  id="modal-success">
+  <div class="container modale-one-click__container">
+    <div class="modal__box modal__box--success">
+      <button class="modal__close btn-reset">
+        <svg class="modal__img" id="modal-success-close">
+          <use xlink:href="img/sprite.svg#exit"></use>
+        </svg>
+      </button>
+      <div class="modal__wrapper">
+        <img src="../img/elephant.svg" alt="Логотип компании" class="modal__pic modal__pic--success">
+        <h2 class="modal__title modal__title--success title">
+          Спасибо, мы вам перезвоним!
+        </h2>
+      </div>
+  </div>
+</section>
+
         <section class="product-section">
   <div class="container product-section__container">
     <ol class="breadcrumbs list-reset">
@@ -161,7 +214,7 @@
       </li>
     </ol>
     <div class="product-section__wrapper">
-      <div class="product-section__picture product-picture">
+      <div class="product-section__picture product-picture" id="scale-btn">
         <div class="product-picture__top">
           <picture>
             <source srcset="../img/D-31-maxi.webp" type="image/webp">
@@ -201,7 +254,7 @@
         <span class="product-section__price">
           28 490 руб
         </span>
-        <button class="product-section__btn btn btn--primary">
+        <button class="product-section__btn btn btn--primary" id="buy-in-one-click-btn">
           Купить в один клик
         </button>
         <a href="#" class="product-section__link">
@@ -232,7 +285,7 @@
         </div>
       </div>
       <div class="product-section__detail detail">
-        <dl>
+        <dl class="details__descr-list">
   <div class="details__inner descr">
     <dt class="details__key">
       <span class="details__text">Гарантия</span>
@@ -355,6 +408,134 @@
   </div>
 </dl>
 
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="product-similar">
+  <div class="container product-similar__container">
+    <div class="product-similar__top">
+      <h2 class="subtitle product-similar__title">
+        Похожие товары
+      </h2>
+      <div class="product-similar__btn">
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
+            </div>
+    </div>
+    <div class="swiper-offers offers__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide offers__slide card">
+          <article class="card__content">
+            <span class="card__sticker card__sticker--rating">
+              <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+              4,5
+            </span>
+            <div class="card__top card__top--rating">
+              <img src="../img/r-85.png" alt="Диван велюровый" class="card__img">
+            </div>
+            <div class="card__bottom card__bottom--rating">
+              <h3 class="card__subtitle subtitle">
+                Диван велюровый<br>«R-85»
+              </h3>
+              <div class="card__left">
+                <div class="card__inner">
+                  <span class="card__price card__price--rating">34 990 руб</span>
+                </div>
+                <a href="#" class="card__btn btn" target="_blank">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide offers__slide card">
+          <article class="card__content">
+            <span class="card__sticker card__sticker--rating">
+              <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+              4,6
+            </span>
+            <div class="card__top card__top--rating">
+              <img src="../img/h-58.png" alt="Диван флоковый" class="card__img">
+            </div>
+            <div class="card__bottom card__bottom--rating">
+              <h3 class="card__subtitle subtitle">
+                Диван флоковый<br>«H-58»
+              </h3>
+              <div class="card__left">
+                <div class="card__inner">
+                  <span class="card__price card__price--rating">23 990 руб</span>
+                </div>
+                <a href="#" class="card__btn btn" target="_blank">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide offers__slide card">
+          <article class="card__content">
+            <span class="card__sticker card__sticker--rating">
+              <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+              4,5
+            </span>
+            <div class="card__top card__top--rating">
+              <img src="../img/s-44.png" alt="Диван велюровый" class="card__img">
+            </div>
+            <div class="card__bottom card__bottom--rating">
+              <h3 class="card__subtitle subtitle">
+                Диван велюровый<br>«S-44»
+              </h3>
+              <div class="card__left">
+                <div class="card__inner">
+                  <span class="card__price card__price--rating">19 990 руб</span>
+                </div>
+                <a href="#" class="card__btn btn" target="_blank">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide offers__slide card">
+          <article class="card__content">
+            <span class="card__sticker card__sticker--rating">
+              <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+              4,8
+            </span>
+            <div class="card__top card__top--rating">
+              <img src="../img/v-43.png" alt="Диван шиниловый" class="card__img">
+            </div>
+            <div class="card__bottom card__bottom--rating">
+              <h3 class="card__subtitle subtitle">
+                Диван шиниловый<br>«V-43»
+              </h3>
+              <div class="card__left">
+                <div class="card__inner">
+                  <span class="card__price card__price--rating">19 990 руб</span>
+                </div>
+                <a href="#" class="card__btn btn" target="_blank">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide offers__slide card">
+          <article class="card__content">
+            <span class="card__sticker card__sticker--rating">
+              <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+              4,8
+            </span>
+            <div class="card__top card__top--rating">
+              <img src="../img/g-41.png" alt="Диван флоковый" class="card__img">
+            </div>
+            <div class="card__bottom card__bottom--rating">
+              <h3 class="card__subtitle subtitle">
+                Диван флоковый<br>«G-41»
+              </h3>
+              <div class="card__left">
+                <div class="card__inner">
+                  <span class="card__price card__price--rating">17 990 руб</span>
+                </div>
+                <a href="#" class="card__btn btn" target="_blank">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </div>
@@ -484,5 +665,4 @@
 
     </div>
   </body>
-
 </html>

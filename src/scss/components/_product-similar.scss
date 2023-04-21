@@ -1,0 +1,17 @@
+.product-similar {
+  margin-bottom: 70px;
+  &__top {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn {
+    display: flex;
+    align-items:flex-end;
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      top: 8px;
+    }
+  }
+}

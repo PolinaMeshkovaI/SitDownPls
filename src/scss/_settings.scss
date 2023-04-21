@@ -139,6 +139,7 @@ a {
   line-height: 100%;
   border: 2px solid $primary;
   border-radius: 10px;
+  cursor: pointer;
   &--primary {
     background: $primary;
     color: $light-color;

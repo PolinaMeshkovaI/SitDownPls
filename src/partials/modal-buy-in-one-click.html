@@ -1,0 +1,35 @@
+<section class="modal"  id="modal-one-click">
+  <div class="container modal__container">
+    <div class="modal__box">
+      <button class="modal__close btn-reset">
+        <svg class="modal__img" id="modal-one-click-close">
+          <use xlink:href="img/sprite.svg#exit"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title title">
+        Купить в&nbsp;один клик
+      </h2>
+      <p class="modal__descr">
+        Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
+      </p>
+      <form action="POST" class="modal__form form">
+        <div class="form__wrapper">
+            <input type="text" class="form__input" name="name" placeholder="Как вас зовут?" id="name" required>
+        </div>
+        <div class="form__wrapper">
+          <input type="tel" class="form__input" name="tel" placeholder="Ваш телефон" id="tel" required>
+        </div>
+        <div class="form__bottom">
+          <button class="btn btn--primary form__btn btn-reset" id="modal-success-btn">Отправить</button>
+          <label for="checkbox" class="form__check">
+            <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" required>
+            <span class="form__descr">
+              Принимаю
+              <a href="#" class="form__link">пользовательское соглашение</a>
+            </span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
