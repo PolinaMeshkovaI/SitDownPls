@@ -145,17 +145,17 @@
       <p class="modal__descr">
         Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
       </p>
-      <form action="POST" class="modal__form form">
+      <form action="#" class="modal__form form" id="modal-success-form">
         <div class="form__wrapper">
-            <input type="text" class="form__input" name="name" placeholder="Как вас зовут?" id="name" required>
+            <input type="text" class="form__input modal-success-input" name="name" placeholder="Как вас зовут?" id="name" required>
         </div>
         <div class="form__wrapper">
-          <input type="tel" class="form__input" name="tel" placeholder="Ваш телефон" id="tel" required>
+          <input type="tel" class="form__input modal-success-input" name="tel" placeholder="Ваш телефон" id="tel" required>
         </div>
         <div class="form__bottom">
-          <button class="btn btn--primary form__btn btn-reset" id="modal-success-btn">Отправить</button>
+          <button type="submit" class="btn btn--primary form__btn btn-reset">Отправить</button>
           <label for="checkbox" class="form__check">
-            <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" required>
+            <input class="form__checkbox visually-hidden modal-success-input" type="checkbox" id="checkbox" required>
             <span class="form__descr">
               Принимаю
               <a href="#" class="form__link">пользовательское соглашение</a>
@@ -167,8 +167,8 @@
   </div>
 </section>
 
-        <section class="modal"  id="modal-success">
-  <div class="container modale-one-click__container">
+        <section class="modal modal--success"  id="modal-success">
+  <div class="container modal__container">
     <div class="modal__box modal__box--success">
       <button class="modal__close btn-reset">
         <svg class="modal__img" id="modal-success-close">
@@ -180,6 +180,57 @@
         <h2 class="modal__title modal__title--success title">
           Спасибо, мы вам перезвоним!
         </h2>
+      </div>
+  </div>
+</section>
+
+        <section class="modal modal--scale modal--open"  id="modal-scale">
+  <div class="container modal__container">
+    <div class="modal__box modal__box--scale">
+      <button class="modal__close btn-reset" id="modal-scale-close">
+        <svg class="modal__img">
+          <use xlink:href="img/sprite.svg#exit"></use>
+        </svg>
+      </button>
+      <div class="modal__wrapper">
+        <div class="swiper card-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card-slider__item">
+              <img class="card-slider__img" src="../img/D-31-maxi.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider__item">
+              <img class="card-slider__img card-slider__img--1" src="../img/D-31-maxi-1.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider__item">
+              <img class="card-slider__img card-slider__img--2" src="../img/D-31-maxi-2.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider__item">
+              <img class="card-slider__img card-slider__img--3" src="../img/D-31-maxi-3.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider__item">
+              <img class="card-slider__img card-slider__img--4" src="../img/D-31-maxi-4.png" alt="Фото дивана D-31">
+            </div>
+          </div>
+        </div>
+        <div class="swiper card-slider-nav">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card-slider-nav__item">
+              <img class="card-slider-nav__img card-slider-nav__img--0" src="../img/D-31-maxi.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider-nav__item">
+              <img class="card-slider-nav__img" src="../img/D-31-maxi-1.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider-nav__item">
+              <img class="card-slider-nav__img" src="../img/D-31-maxi-2.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider-nav__item">
+              <img class="card-slider-nav__img" src="../img/D-31-maxi-3.png" alt="Фото дивана D-31">
+            </div>
+            <div class="swiper-slide card-slider-nav__item">
+              <img class="card-slider-nav__img" src="../img/D-31-maxi-4.png" alt="Фото дивана D-31">
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </section>
@@ -214,30 +265,40 @@
       </li>
     </ol>
     <div class="product-section__wrapper">
-      <div class="product-section__picture product-picture" id="scale-btn">
+      <div class="product-section__picture product-picture">
         <div class="product-picture__top">
-          <picture>
-            <source srcset="../img/D-31-maxi.webp" type="image/webp">
-            <img loading="lazy" src="../img/D-31-maxi.png" class="product-picture__img" width="624" height="245" alt="диван d-31">
-          </picture>
+          <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
+            <picture>
+              <source srcset="../img/D-31-maxi.webp" type="image/webp">
+              <img loading="lazy" src="../img/D-31-maxi.png" class="product-picture__img" width="624" height="245" alt="диван d-31">
+            </picture>
+          </button>
         </div>
         <div class="product-picture__bottom">
-          <picture>
-            <source srcset="../img/D-31-maxi-1.webp" type="image/webp">
-            <img loading="lazy" src="../img/D-31-maxi-1.png" class="product-picture__item" width="123" height="61" alt="диван d-31">
-          </picture>
-          <picture>
-            <source srcset="../img/D-31-maxi-2.webp" type="image/webp">
-            <img loading="lazy" src="../img/D-31-maxi-2.png" class="product-picture__item" width="66" height="61" alt="диван d-31">
-          </picture>
-          <picture>
-            <source srcset="../img/D-31-maxi-3.webp" type="image/webp">
-            <img loading="lazy" src="../img/D-31-maxi-3.png" class="product-picture__item" width="134" height="61" alt="диван d-31">
-          </picture>
-          <picture>
-            <source srcset="../img/D-31-maxi-4.webp" type="image/webp">
-            <img loading="lazy" src="../img/D-31-maxi-4.png" class="product-picture__item" width="137" height="61" alt="диван d-31">
-          </picture>
+          <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
+            <picture>
+              <source srcset="../img/D-31-maxi-1.webp" type="image/webp">
+              <img loading="lazy" src="../img/D-31-maxi-1.png" class="product-picture__item" width="123" height="61" alt="диван d-31">
+            </picture>
+          </button>
+          <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
+            <picture>
+              <source srcset="../img/D-31-maxi-2.webp" type="image/webp">
+              <img loading="lazy" src="../img/D-31-maxi-2.png" class="product-picture__item" width="66" height="61" alt="диван d-31">
+            </picture>
+          </button>
+          <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
+            <picture>
+              <source srcset="../img/D-31-maxi-3.webp" type="image/webp">
+              <img loading="lazy" src="../img/D-31-maxi-3.png" class="product-picture__item" width="134" height="61" alt="диван d-31">
+            </picture>
+          </button>
+          <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
+            <picture>
+              <source srcset="../img/D-31-maxi-4.webp" type="image/webp">
+              <img loading="lazy" src="../img/D-31-maxi-4.png" class="product-picture__item" width="137" height="61" alt="диван d-31">
+            </picture>
+          </button>
         </div>
       </div>
       <div class="product-section__info">

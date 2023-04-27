@@ -2,9 +2,10 @@ export const modalOneClick = () => {
   const modalClick = document.getElementById("modal-one-click");
   const modalClickClose = document.getElementById("modal-one-click-close");
   const oneClickBtn = document.getElementById("buy-in-one-click-btn");
-  const modalSuccess = document.getElementById("modal-success");
-  const modalSuccessClose =  document.getElementById("modal-success-close");
-  const modalSuccessBtn = document.getElementById("modal-success-btn");
+
+  const modalScaleBtn = document.querySelectorAll(".product-picture__modal-btn");
+  const modalScale = document.getElementById("modal-scale");
+  const modalScaleClose = document.getElementById("modal-scale-close");
 
   oneClickBtn.addEventListener("click", function() {
     modalClick.classList.add("modal--open")
@@ -14,13 +15,12 @@ export const modalOneClick = () => {
     modalClick.classList.remove("modal--open")
   })
 
-  modalSuccessBtn.addEventListener("click", function() {
-    modalClick.classList.remove("modal--open")
-    modalSuccess.classList.add("modal--open")
-  })
+  modalScaleBtn.forEach(el => el.addEventListener('click', function() {
+    modalScale.classList.add("modal--open")
+  }))
 
-  modalSuccessClose.addEventListener("click", function() {
-    modalSuccess.classList.remove("modal--open")
+  modalScaleClose.addEventListener("click", function() {
+    modalScale.classList.remove("modal--open")
   })
 }
 

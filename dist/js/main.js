@@ -3200,6 +3200,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
 /* harmony import */ var _components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs-btn */ "./src/js/components/tabs-btn.js");
 /* harmony import */ var _components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal-buy-in-one-click */ "./src/js/components/modal-buy-in-one-click.js");
+/* harmony import */ var _components_modal_success_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal-success-form */ "./src/js/components/modal-success-form.js");
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
@@ -3217,6 +3218,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__.tabsBtn)();
 
 (0,_components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__.modalOneClick)();
+
+(0,_components_modal_success_form__WEBPACK_IMPORTED_MODULE_8__.modalSuccessForm)();
 
 /***/ }),
 
@@ -3286,18 +3289,58 @@ const modalOneClick = () => {
   const modalClick = document.getElementById("modal-one-click");
   const modalClickClose = document.getElementById("modal-one-click-close");
   const oneClickBtn = document.getElementById("buy-in-one-click-btn");
-  const modalSuccess = document.getElementById("modal-success");
-  const modalSuccessClose = document.getElementById("modal-success-close");
-  const modalSuccessBtn = document.getElementById("modal-success-btn");
+  const modalScaleBtn = document.querySelectorAll(".product-picture__modal-btn");
+  const modalScale = document.getElementById("modal-scale");
+  const modalScaleClose = document.getElementById("modal-scale-close");
   oneClickBtn.addEventListener("click", function () {
     modalClick.classList.add("modal--open");
   });
   modalClickClose.addEventListener("click", function () {
     modalClick.classList.remove("modal--open");
   });
-  modalSuccessBtn.addEventListener("click", function () {
-    modalClick.classList.remove("modal--open");
-    modalSuccess.classList.add("modal--open");
+  modalScaleBtn.forEach(el => el.addEventListener('click', function () {
+    modalScale.classList.add("modal--open");
+  }));
+  modalScaleClose.addEventListener("click", function () {
+    modalScale.classList.remove("modal--open");
+  });
+};
+
+/***/ }),
+
+/***/ "./src/js/components/modal-success-form.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/modal-success-form.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "modalSuccessForm": () => (/* binding */ modalSuccessForm)
+/* harmony export */ });
+const modalSuccessForm = () => {
+  const modalClick = document.getElementById("modal-one-click");
+  const modalSuccess = document.getElementById("modal-success");
+  const modalSuccessClose = document.getElementById("modal-success-close");
+  const modalSuccessForm = document.getElementById("modal-success-form");
+  function successValidation(form) {
+    let result = true;
+    const allModalInputs = document.querySelectorAll(".modal-success-input");
+    for (let input of allModalInputs) {
+      if (input.value == "") {
+        result = false;
+      }
+    }
+    ;
+    return result;
+  }
+  modalSuccessForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (successValidation(this) == true) {
+      modalClick.classList.remove("modal--open");
+      modalSuccess.classList.add("modal--open");
+    }
   });
   modalSuccessClose.addEventListener("click", function () {
     modalSuccess.classList.remove("modal--open");
@@ -3396,7 +3439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs]);
 const swiper = () => {
   const swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-hero', {
     autoplay: {
@@ -3421,6 +3464,22 @@ const swiper = () => {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev'
     }
+  });
+  const swiperModal = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.card-slider', {
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    thumbs: {
+      swiper: {
+        el: ".card-slider-nav",
+        slidesPerView: 4
+      }
+    }
+  });
+  const swiperModalNav = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.card-slider-nav', {
+    spaceBetween: 70,
+    slidesPerView: 'auto'
+    // freeMode: true,
+    // watchSlidesProgress: true,
   });
 };
 

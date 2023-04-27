@@ -1,5 +1,5 @@
-import Swiper, { Autoplay, Navigation } from 'swiper';
-Swiper.use([Autoplay, Navigation]);
+import Swiper, { Autoplay, Navigation, Thumbs } from 'swiper';
+Swiper.use([Autoplay, Navigation, Thumbs]);
 
 export const swiper= () => {
   const swiperHero = new Swiper('.swiper-hero', {
@@ -27,6 +27,25 @@ export const swiper= () => {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev',
     },
+  });
+
+  const swiperModal = new Swiper('.card-slider', {
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    thumbs: {
+      swiper: {
+        el: ".card-slider-nav",
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const swiperModalNav = new Swiper('.card-slider-nav', {
+    spaceBetween: 70,
+    slidesPerView: 'auto',
+    // freeMode: true,
+    // watchSlidesProgress: true,
+
   })
 }
 

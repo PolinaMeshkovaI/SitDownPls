@@ -12,17 +12,17 @@
       <p class="modal__descr">
         Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
       </p>
-      <form action="POST" class="modal__form form">
+      <form action="#" class="modal__form form" id="modal-success-form">
         <div class="form__wrapper">
-            <input type="text" class="form__input" name="name" placeholder="Как вас зовут?" id="name" required>
+            <input type="text" class="form__input modal-success-input" name="name" placeholder="Как вас зовут?" id="name" required>
         </div>
         <div class="form__wrapper">
-          <input type="tel" class="form__input" name="tel" placeholder="Ваш телефон" id="tel" required>
+          <input type="tel" class="form__input modal-success-input" name="tel" placeholder="Ваш телефон" id="tel" required>
         </div>
         <div class="form__bottom">
-          <button class="btn btn--primary form__btn btn-reset" id="modal-success-btn">Отправить</button>
+          <button type="submit" class="btn btn--primary form__btn btn-reset">Отправить</button>
           <label for="checkbox" class="form__check">
-            <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" required>
+            <input class="form__checkbox visually-hidden modal-success-input" type="checkbox" id="checkbox" required>
             <span class="form__descr">
               Принимаю
               <a href="#" class="form__link">пользовательское соглашение</a>

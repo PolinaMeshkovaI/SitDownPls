@@ -22,3 +22,6 @@ tabsBtn();
 
 import { modalOneClick } from "./components/modal-buy-in-one-click";
 modalOneClick();
+
+import { modalSuccessForm } from "./components/modal-success-form";
+modalSuccessForm ();

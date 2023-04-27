@@ -1,0 +1,45 @@
+.card-slider {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    object-fit: contain;
+    height: 100%;
+    &--1 {
+      width: 1065px;
+    }
+    &--2 {
+      width: 600px;
+    }
+    &--3 {
+      width: 1065px;
+    }
+    &--4 {
+      width: 1065px;
+    }
+  }
+}
+
+.card-slider-nav {
+  display: flex;
+  padding: 20px 51px;
+  width: 100%;
+  background-color: $grey_light;
+  &__item {
+    height: 100%;
+  }
+  &__img {
+    display: block;
+    cursor: pointer;
+    object-fit: contain;
+    &--0{
+      width: 253px;
+      height: 126px;
+    }
+  }
+}
