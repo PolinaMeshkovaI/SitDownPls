@@ -10,6 +10,9 @@
       padding: 8px $container-offset-1024;
       background-color: $light-color;
     }
+    @media (max-width: 1008px) {
+      padding: 7px $container-offset-768;
+    }
   }
   &__center {
     @include flex-all-sb;
@@ -20,6 +23,20 @@
     @media (max-width: 1840px) {
       padding: 32px $container-offset-1024;
     }
+    @media (max-width: 1008px) {
+      padding: 28px $container-offset-768;
+    }
+  }
+  &__center-grey {
+    padding: 6px $container-offset-1024;
+    @media (max-width: 1008px) {
+      padding: 16px $container-offset-768;
+    }
+  }
+  &__nav {
+    @media (max-width: 1008px) {
+     display: none;
+    }
   }
   &__bottom {
     @include flex-all-sb;
@@ -29,6 +46,10 @@
       padding-left: $container-offset-1024;
       padding-right: $container-offset-1024;
     }
+    @media (max-width: 768px) {
+      padding-left: $container-offset-768;
+      padding-right: $container-offset-768;
+    }
   }
   &__search {
     position: relative;
@@ -36,6 +57,14 @@
     background-color: $grey_light;
     @media (max-width: 1840px) {
       min-width: calc(100% - 300px);
+    }
+    @media (max-width: 1008px) {
+      min-width: calc(100% - 189px);
+    }
+  }
+  &__link {
+    @media (max-width: 1008px) {
+      margin-left: 76px;
     }
   }
 }
@@ -162,12 +191,19 @@
 }
 .center-grey {
   display: none;
-  padding: 6px 36px;
   align-items: center;
   justify-content: space-between;
   background-color: $grey_light;
   @media (max-width: 1840px) {
     display: flex;
+  }
+  @media (max-width: 1008px) {
+    justify-content: center;
+  }
+  &__right {
+    @media (max-width: 1008px) {
+      display: none;
+    }
   }
 }
 .menu {
@@ -176,6 +212,9 @@
   }
   &__item:not(:last-child) {
     margin-right: 64px;
+    @media (max-width: 1008px) {
+      margin-right: 35px;
+    }
   }
   &__link {
     font-weight: 400;
@@ -250,6 +289,9 @@
   &__select .choices {
     background-color: none;
     width: 300px;
+    @media (max-width: 1008px) {
+      width: 189px;
+    }
     &__inner {
       position: relative;
       width: 100%;

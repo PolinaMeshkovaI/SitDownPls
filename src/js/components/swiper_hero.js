@@ -28,11 +28,15 @@ export const swiper= () => {
     // slidesPerView: 2,
     // spaceBetween: 30,
     breakpoints: {
-      1024: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      840: {
         slidesPerView: 3,
         spaceBetween: 32,
       },
-      1840: {
+      1841: {
         slidesPerView: 2,
         spaceBetween: 30,
       },

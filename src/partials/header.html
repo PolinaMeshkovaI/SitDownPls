@@ -68,10 +68,26 @@
         </a>
       </div>
     </div>
-    <div class="header__center">
+    <div class="header__center center">
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
       <a href="#" class="header__link">
         <img src="../img/logo.svg" alt="Логотип" class="header__logo">
       </a>
+      <div class="center__user user-block">
+        <a href="#" class="user-block__link">
+          <svg class="user-block__right user-block__use">
+            <use xlink:href="img/sprite.svg#user"></use>
+          </svg>
+        </a>
+        <a href="#" class="user-block__link ">
+          <span class="user-block__counter">0</span>
+         <svg class="user-block__cart">
+           <use xlink:href="img/sprite.svg#shop_cart"></use>
+         </svg>
+        </a>
+      </div>
       <nav class="header__nav nav" title="">
         <ul class="nav__list list-reset">
           <li class="nav__item">
