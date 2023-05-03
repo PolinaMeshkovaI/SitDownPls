@@ -39,24 +39,56 @@
             <svg class="top__img">
               <use xlink:href="img/sprite.svg#call"></use>
             </svg>
-            +7 495 885-45-47</a>
+            +7 495 885-45-47
+          </a>
         </span>
       </div>
       <div class="top__menu menu">
         <ul class="menu__list list-reset">
-         <li class="menu__item">
-          <a href="#" class="menu__link nav-desc">О компании</a>
-        </li>
-         <li class="menu__item">
-          <a href="#" class="menu__link nav-desc">Гарантия и возврат</a>
-        </li>
-         <li class="menu__item">
-          <a href="#" class="menu__link nav-desc">Корпоративным клиентам</a>
-        </li>
-         <li class="menu__item">
-          <a href="#" class="menu__link nav-desc">Дизайн-решение</a>
-        </li>
-      </ul>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Гарантия и возврат</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Корпоративным клиентам</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Дизайн-решение</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__center-grey center-grey">
+      <div class="center-grey__menu menu">
+        <ul class="menu__list list-reset">
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Гарантия и возврат</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Корпоративным клиентам</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link nav-desc">Дизайн-решение</a>
+          </li>
+        </ul>
+      </div>
+      <div class="center-grey__right user-block">
+        <a href="#" class="user-block__link">
+          <svg class="user-block__right user-block__use">
+            <use xlink:href="img/sprite.svg#user"></use>
+          </svg>
+        </a>
+        <a href="#" class="user-block__link ">
+          <span class="user-block__counter">0</span>
+         <svg class="user-block__cart">
+           <use xlink:href="img/sprite.svg#shop_cart"></use>
+         </svg>
+        </a>
       </div>
     </div>
     <div class="header__center">
@@ -113,15 +145,15 @@
           </select>
         </form>
       </div>
-      <div class="bottom__right">
-        <a href="#" class="bottom__link">
-          <svg class="bottom__right bottom__right--use">
+      <div class="bottom__right user-block">
+        <a href="#" class="user-block__link">
+          <svg class="user-block__use">
             <use xlink:href="img/sprite.svg#user"></use>
           </svg>
         </a>
-        <a href="#" class="bottom__link">
-          <span class="bottom__counter">0</span>
-         <svg class="bottom__right bottom__right--cart">
+        <a href="#" class="user-block__link ">
+          <span class="user-block__counter">0</span>
+         <svg class="user-block__cart">
            <use xlink:href="img/sprite.svg#shop_cart"></use>
          </svg>
         </a>
@@ -167,6 +199,7 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
@@ -750,20 +783,22 @@
     </h2>
     <ul class="categories__list list-reset">
       <li class="categories__item categories__item--1">
-        <ul class="list-reset categories__catalog catalog">
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Прямые</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Угловые</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Модульные</a>
-          </li>
-        </ul>
-        <h3 class="subtitle categories__subtitle">
-          Диваны
-        </h3>
+        <div class="categories__wrapper">
+          <ul class="list-reset categories__catalog catalog">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Прямые</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Угловые</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Модульные</a>
+            </li>
+          </ul>
+          <h3 class="subtitle categories__subtitle">
+            Диваны
+          </h3>
+        </div>
         <div class="categories__bg categories__bg--1">
         </div>
         <a href="#" class="arrow-link categories__link">
@@ -771,17 +806,19 @@
         </a>
       </li>
       <li class="categories__item categories__item--2">
-        <ul class="list-reset categories__catalog catalog">
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Мягкие</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Кресла-кровати</a>
-          </li>
-        </ul>
-        <h3 class="subtitle categories__subtitle">
-          Кресла
-        </h3>
+        <div class="categories__wrapper">
+          <ul class="list-reset categories__catalog catalog">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Мягкие</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Кресла-кровати</a>
+            </li>
+          </ul>
+          <h3 class="subtitle categories__subtitle">
+            Кресла
+          </h3>
+        </div>
         <div class="categories__bg categories__bg--2">
         </div>
         <a href="#" class="arrow-link categories__link">
@@ -789,17 +826,19 @@
         </a>
       </li>
       <li class="categories__item categories__item--3">
-        <ul class="list-reset categories__catalog catalog">
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Односпальные</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Двуспальные</a>
-          </li>
-        </ul>
-        <h3 class="subtitle categories__subtitle">
-          Кровати
-        </h3>
+        <div class="categories__wrapper">
+          <ul class="list-reset categories__catalog catalog">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Односпальные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Двуспальные</a>
+            </li>
+          </ul>
+          <h3 class="subtitle categories__subtitle">
+            Кровати
+          </h3>
+        </div>
         <div class="categories__bg categories__bg--3">
         </div>
         <a href="#" class="arrow-link categories__link">
@@ -807,17 +846,19 @@
         </a>
       </li>
       <li class="categories__item categories__item--4">
-        <ul class="list-reset categories__catalog catalog">
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Тумбы</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Комоды</a>
-          </li>
-        </ul>
-        <h3 class="subtitle categories__subtitle">
-          Тумбы и комоды
-        </h3>
+        <div class="categories__wrapper">
+          <ul class="list-reset categories__catalog catalog">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Тумбы</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Комоды</a>
+            </li>
+          </ul>
+          <h3 class="subtitle categories__subtitle">
+            Тумбы и комоды
+          </h3>
+        </div>
         <div class="categories__bg categories__bg--4">
         </div>
         <a href="#" class="arrow-link categories__link">
@@ -825,17 +866,19 @@
         </a>
       </li>
       <li class="categories__item categories__item--5">
-        <ul class="list-reset categories__catalog catalog">
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Деревянные</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#" class="catalog__link">Металлокаркас</a>
-          </li>
-        </ul>
-        <h3 class="subtitle categories__subtitle">
-          Стулья
-        </h3>
+        <div class="categories__wrapper">
+          <ul class="list-reset categories__catalog catalog">
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Деревянные</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link">Металлокаркас</a>
+            </li>
+          </ul>
+          <h3 class="subtitle categories__subtitle">
+            Стулья
+          </h3>
+        </div>
         <div class="categories__bg categories__bg--5">
         </div>
         <a href="#" class="arrow-link categories__link">

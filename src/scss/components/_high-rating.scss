@@ -1,18 +1,31 @@
 .high-rating {
   &__container {
-    padding-top: 61px;
+    padding-top: 55px;
     padding-bottom: 66px;
+    @media (max-width: 1840px) {
+      padding-top: 65px;
+      padding-bottom: 70px;
+    }
   }
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-bottom: 34px;
+    @media (max-width: 1840px) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 39px;
+    }
     & .card {
       padding: 0;
       min-height: 420px;
       &:nth-child(n + 9) {
         display: none;
+      }
+      @media (max-width: 1840px) {
+        &:nth-child(n + 7) {
+          display: none;
+        }
       }
       &.is-visible {
         display: block;

@@ -3408,19 +3408,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "showMore": () => (/* binding */ showMore)
 /* harmony export */ });
 const showMore = () => {
-  const showMore = document.querySelector('.high-rating__btn');
-  const productsLength = document.querySelectorAll('.high-rating__cards').length;
-  let items = 8;
-  if (showMore) {
-    showMore.addEventListener('click', () => {
-      items += 4;
-      const array = Array.from(document.querySelector('.high-rating__cards').children);
-      const visItems = array.slice(0, items);
+  const showMoreBtn = document.querySelector('.high-rating__btn');
+  const mediaQuery1024 = window.matchMedia('(max-width: 1840px)');
+  let items;
+  function showMore(n) {
+    showMoreBtn.addEventListener('click', () => {
+      items += n;
+      const arrayCard = Array.from(document.querySelector('.high-rating__cards').children);
+      const visItems = arrayCard.slice(0, items);
       visItems.forEach(el => el.classList.add('is-visible'));
-      if (visItems.length === productsLength) {
-        showMore.setAttribute('disabled', 'disabled');
+      if (visItems.length === arrayCard.length) {
+        showMoreBtn.setAttribute('disabled', 'disabled');
       }
     });
+  }
+  if (showMoreBtn) {
+    if (mediaQuery1024.matches) {
+      items = 6;
+      showMore(3);
+    } else {
+      items = 8;
+      showMore(4);
+    }
   }
 };
 
@@ -3439,11 +3448,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 const swiper = () => {
   const swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-hero', {
     autoplay: {
       delay: 6000
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
     },
     loop: true,
     disableOnInteraction: false,
@@ -3458,8 +3471,18 @@ const swiper = () => {
     }
   });
   const swiperUseful = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-useful', {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    // slidesPerView: 2,
+    // spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      },
+      1840: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    },
     navigation: {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev'

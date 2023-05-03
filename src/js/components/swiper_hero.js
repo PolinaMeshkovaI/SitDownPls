@@ -1,10 +1,14 @@
-import Swiper, { Autoplay, Navigation, Thumbs } from 'swiper';
-Swiper.use([Autoplay, Navigation, Thumbs]);
+import Swiper, { Autoplay, Navigation, Thumbs, Pagination } from 'swiper';
+Swiper.use([Autoplay, Navigation, Thumbs, Pagination]);
 
 export const swiper= () => {
   const swiperHero = new Swiper('.swiper-hero', {
     autoplay: {
       delay: 6000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
     },
     loop: true,
     disableOnInteraction: false,
@@ -21,8 +25,18 @@ export const swiper= () => {
   });
 
   const swiperUseful = new Swiper('.swiper-useful', {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    // slidesPerView: 2,
+    // spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1840: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
     navigation: {
       nextEl: '.swiper2-button-next',
       prevEl: '.swiper2-button-prev',

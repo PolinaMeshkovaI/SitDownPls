@@ -95,10 +95,14 @@
 .offers {
   &__container {
     padding-top: 65px;
+    @media (max-width: 1840px) {
+      padding-top: 70px;
+    }
   }
   &__card {
     min-height: 460px;
-    padding: 30px;
+    padding-top: 68px;
+    padding-bottom: 30px;
   }
   &__top {
     position: relative;
@@ -115,8 +119,14 @@
   &__slide {
     width: 23.125%;
     height: 100%;
+    @media (max-width: 1840px) {
+      width: calc((100% - 60px) / 3);
+    }
     &--big{
       width: 48.75%;
+      @media (max-width: 1840px) {
+        width: calc((100% - 60px) / 3);
+      }
     }
   }
 }

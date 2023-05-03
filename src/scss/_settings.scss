@@ -85,6 +85,9 @@ a {
   margin: 0 auto;
   padding: 0 $container-offset;
   max-width: $container-width;
+  @media (max-width: 1840px) {
+    padding: 0 $container-offset-1024;
+  }
   &--cooperation {
     padding-right: 758px;
     margin-bottom: 34px;

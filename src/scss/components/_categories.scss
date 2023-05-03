@@ -2,65 +2,131 @@
   &__container {
     padding-top: 65px;
     padding-bottom: 68px;
+    @media (max-width: 1840px) {
+      padding-top: 70px;
+      padding-bottom: 73px;
+    }
   }
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 32px;
+    @media (max-width: 1840px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__item {
+    position: relative;
+    display: flex;
     padding: 30px;
+    min-height: 511px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
     background: $grey-light;
     border-radius: 10px;
     &--1 {
       grid-column-start: 1;
       grid-column-end: 4;
+      @media (max-width: 1840px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
     }
     &--2 {
       grid-column-start: 4;
       grid-column-end: 7;
+      @media (max-width: 1840px) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
     }
     &--3 {
+      min-height: 405px;
       grid-column-start: 1;
       grid-column-end: 3;
+      @media (max-width: 1840px) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
     }
     &--4 {
+      min-height: 405px;
       grid-column-start: 3;
       grid-column-end: 5;
+      @media (max-width: 1840px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
     }
     &--5 {
+      min-height: 405px;
       grid-column-start: 5;
       grid-column-end: 7;
+      @media (max-width: 1840px) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
     }
   }
   &__subtitle {
     margin-bottom: 30px;
   }
   &__bg {
-    position: relative;
-    margin-bottom: 32px;
-    min-height: 306px;
-    left: -30px;
+    position: absolute;
+    // margin-bottom: 32px;
+    width: 100%;
+    // min-height: 306px;
+    left: 0;
+    bottom: 78px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
+    @media (max-width: 1840px) {
+      bottom: 88px;
+    }
     &--1 {
+      min-height: 306px;
       background-image: url(../../img/categories_sofa.png);
     }
     &--2 {
+      min-height: 306px;
       background-image: url(../../img/categories_armchair.png);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/categories_armchair_1024.png);
+      }
     }
     &--3 {
+      max-width: 306px;
       min-height: 202px;
+      background-size: contain;
       background-image: url(../../img/categories_bed.png);
+      @media (max-width: 1840px) {
+        min-height: 296px;
+        background-image: url(../../img/categories_bed_1024.png);
+      }
     }
     &--4 {
+      max-width: 330px;
       min-height: 202px;
       background-image: url(../../img/categories_dresser.png);
+      @media (max-width: 1840px) {
+        min-height: 296px;
+        background-image: url(../../img/categories_dresser_1024.png);
+      }
     }
     &--5 {
+      max-width: 256px;
       min-height: 202px;
       background-image: url(../../img/categories_chair.png);
+      @media (max-width: 1840px) {
+        min-height: 296px;
+        background-image: url(../../img/categories_chair_1024.png);
+      }
     }
   }
 }
@@ -69,8 +135,14 @@
   margin-bottom: 14px;
   &__item:not(:last-child) {
     margin-right: 22px;
+    @media (max-width: 1840px) {
+      margin-right: 30px;
+    }
   }
   &__link {
     color: $grey;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
   }
 }

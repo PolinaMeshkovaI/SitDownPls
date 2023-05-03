@@ -5,36 +5,55 @@
   &__top {
     @include flex-all-sb;
     padding: 4px 320px;
-    background-color: $grey_light
+    background-color: $grey_light;
+    @media (max-width: 1840px) {
+      padding: 8px $container-offset-1024;
+      background-color: $light-color;
+    }
   }
   &__center {
     @include flex-all-sb;
     padding-top: 32px;
     padding-bottom: 30px;
     padding-left: 320px;
-    padding-right: 320px
+    padding-right: 320px;
+    @media (max-width: 1840px) {
+      padding: 32px $container-offset-1024;
+    }
   }
   &__bottom {
     @include flex-all-sb;
     padding-left: 320px;
-    padding-right: 320px
+    padding-right: 320px;
+    @media (max-width: 1840px) {
+      padding-left: $container-offset-1024;
+      padding-right: $container-offset-1024;
+    }
   }
   &__search {
     position: relative;
-    width: 761px;
+    min-width: 761px;
     background-color: $grey_light;
+    @media (max-width: 1840px) {
+      min-width: calc(100% - 300px);
+    }
   }
 }
 .top {
   &__contacts {
     @include flex-all-sb;
+    @media (max-width: 1840px) {
+      width: 100%;
+    }
   }
   &__select {
     @include flex-all-sb;
-    // margin-right: 17px;
     font-size: 19px;
     line-height: 120%;
     color: $black;
+    @media (max-width: 1840px) {
+      font-size: 16px;
+    }
   }
   &__select .choices {
     width: 91px;
@@ -102,6 +121,9 @@
     fill: $secondary;
     transition: fill 0.3s ease-in-out;
   }
+  &__tel {
+    display: inline-block;
+  }
   &__link {
     display: flex;
     height: 22px;
@@ -132,31 +154,46 @@
         fill: $secondary_shade;
     }
   }
-  .menu {
-    &__list {
-      @include flex-all-sb;
+  &__menu {
+    @media (max-width: 1840px) {
+      display: none;
     }
-    &__item:not(:last-child) {
-      margin-right: 64px;
+  }
+}
+.center-grey {
+  display: none;
+  padding: 6px 36px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $grey_light;
+  @media (max-width: 1840px) {
+    display: flex;
+  }
+}
+.menu {
+  &__list {
+    @include flex-all-sb;
+  }
+  &__item:not(:last-child) {
+    margin-right: 64px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $grey;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:focus {
+      color: $primary_shade;
+      background-color: $pink_violet;
     }
-    &__link {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 100%;
-      color: $grey;
-      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      &:focus {
-        color: $primary_shade;
-        background-color: $pink_violet;
-      }
-      &:hover {
-        color: $primary_light;
-        background-color: none;
-      }
-      &:active {
-        color: $primary_shade;
-        background-color: none;
-      }
+    &:hover {
+      color: $primary_light;
+      background-color: none;
+    }
+    &:active {
+      color: $primary_shade;
+      background-color: none;
     }
   }
 }
@@ -196,12 +233,19 @@
   }
   &__item:not(:last-child) {
     margin-right: 92px;
+    @media (max-width: 1840px) {
+      margin-right: 41px;
+    }
   }
 }
 .bottom {
   &__wrapper {
     @include flex-all-sb;
     width: 81%;
+    @media (max-width: 1840px) {
+      align-items: center;
+      width: 100%;
+    }
   }
   &__select .choices {
     background-color: none;
@@ -249,7 +293,7 @@
       }
     }
     &[data-type*=select-one] .choices__inner {
-      padding: 12px 112px 12px 32px;
+      padding: 14px 112px 14px 32px;
       font-size: 16px;
       line-height: 22px;
       color: $primary;
@@ -286,80 +330,24 @@
     background: none;
     border-color: $primary;
   }
-  &__link {
-    display: inline-block;
-    position: relative;
-    padding: 2px;
-  }
-  &__link:not(:last-child) {
-    margin-right: 22px;
-  }
-  &__link:focus-within {
-    background-color: $pink_violet;
-  }
   &__right {
-    &--use {
-      position: relative;
-      width: 26px;
-      height: 28px;
-      fill: $primary;
-      transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      &:focus {
-        fill: $primary_shade;
-      }
-      &:hover {
-        fill: $primary_light;
-        background-color: none;
-      }
-      &:active {
-        fill: $primary_shade;
-        background-color: none;
-      }
+    @media (max-width: 1840px) {
+      display: none;
     }
-    &--cart {
-      width: 41px;
-      height: 28px;
-      fill: $primary;
-      transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      &:focus {
-        fill: $primary_shade;
-        background: $pink_violet;
-      }
-      &:hover {
-        fill: $primary_light;
-        background-color: none;
-      }
-      &:active {
-        fill: $primary_shade;
-        background-color: none;
-      }
-    }
-  }
-  &__counter {
-    position: absolute;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    padding-top: 3px;
-    text-align: center;
-    vertical-align: middle;
-    left: 3px;
-    top: 25%;
-    color: $light-color;
-    background-color: $secondary;
-    font-size: 10px;
-    line-height: 100%;
-    border-radius: 50%;
   }
 }
 .search {
+  // width: 100%;
+  // width: calc(100%-300px);
+  border-radius: 10px 0px 0px 10px;
   &__input {
     position: relative;
     width: 100%;
-    min-width: 761px;
+    // min-width: 761px;
     padding: 20px 0;
     padding-left: 60px;
     padding-right: 65px;
+    border-radius: 10px 0px 0px 10px;
     background-color: $grey_light;
     transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out, outline-color 0.3 ease-in-out;
       &:focus-visible  {
@@ -435,6 +423,71 @@
       z-index: 5;
       transition: border-color 0.3s ease-in-out;
     }
+  }
+}
+.user-block {
+  &__use {
+    position: relative;
+    width: 26px;
+    height: 28px;
+    fill: $primary;
+    transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:focus {
+      fill: $primary_shade;
+    }
+    &:hover {
+      fill: $primary_light;
+      background-color: none;
+    }
+    &:active {
+      fill: $primary_shade;
+      background-color: none;
+    }
+  }
+  &__cart {
+    width: 41px;
+    height: 28px;
+    fill: $primary;
+    transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:focus {
+      fill: $primary_shade;
+      background: $pink_violet;
+    }
+    &:hover {
+      fill: $primary_light;
+      background-color: none;
+    }
+    &:active {
+      fill: $primary_shade;
+      background-color: none;
+    }
+  }
+  &__counter {
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-top: 3px;
+    text-align: center;
+    vertical-align: middle;
+    left: 3px;
+    top: 25%;
+    color: $light-color;
+    background-color: $secondary;
+    font-size: 10px;
+    line-height: 100%;
+    border-radius: 50%;
+  }
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+  }
+  &__link:not(:last-child) {
+    margin-right: 22px;
+  }
+  &__link:focus-within {
+    background-color: $pink_violet;
   }
 }
 

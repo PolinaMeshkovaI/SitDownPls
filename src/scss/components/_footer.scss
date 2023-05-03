@@ -19,12 +19,23 @@
   }
   &__col:not(:last-child) {
     margin-right: 130px;
+    @media (max-width: 1840px) {
+      margin-right: 94px;
+    }
   }
   &__subtitle {
     margin-bottom: 5px;
     padding-top: 3px;
     font-size: 16px;
     line-height: 100%;
+    @media (max-width: 1840px) {
+      padding-top: 0;
+    }
+  }
+  &__item:not(:last-child) {
+    @media (max-width: 1840px) {
+      margin-bottom: 10px;
+    }
   }
   &__link {
     font-weight: 400;

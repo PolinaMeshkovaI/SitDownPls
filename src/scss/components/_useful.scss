@@ -101,6 +101,9 @@
 
 .useful {
   padding-bottom: 64px;
+  @media (max-width: 1840px) {
+    padding-bottom: 72px;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -127,20 +130,39 @@
     background-repeat: no-repeat;
     background-size: 100% 425px;
     border-radius: 10px;
+    @media (max-width: 1840px) {
+      padding-top: 234px;
+      background-size: 100% 202px;
+    }
     &--img1 {
       background-image: url(../../img/useful_slide1.jpg);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/useful_slide1_1024.png);
+      }
     }
     &--img2 {
       background-image: url(../../img/useful_slide2.jpg);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/useful_slide2_1024.png);
+      }
     }
     &--img3 {
       background-image: url(../../img/useful_slide3.jpg);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/useful_slide3_1024.png);
+      }
     }
     &--img4 {
       background-image: url(../../img/useful_slide4.jpg);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/useful_slide4_1024.png);
+      }
     }
     &--img5 {
       background-image: url(../../img/useful_slide5.jpg);
+      @media (max-width: 1840px) {
+        background-image: url(../../img/useful_slide5_1024.png);
+      }
     }
   }
   &__descr {
@@ -149,6 +171,12 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
+    @media (max-width: 1840px) {
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   &__button {
     padding: 16px 33px;
