@@ -23,6 +23,11 @@
     <div class="site-container">
       <header class="header">
   <div class="container header__container">
+    <div class="header__top-320">
+      <a href="#" class="header__link">
+        <img src="../img/logo.svg" alt="Логотип" class="header__logo">
+      </a>
+    </div>
     <div class="header__top top">
       <div class="top__contacts">
         <form class="top__select">
@@ -92,11 +97,38 @@
       </div>
     </div>
     <div class="header__center center">
+      <nav class="header__nav nav header__nav--768" title="">
+        <button class="nav__close btn-reset">
+          <svg aria-label="Кнопка закрытия меню" class="nav__close nav__close--img" width="24" height="24">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Магазины</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Шоу-рум</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Дисконт</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
         <span class="burger__line"></span>
       </button>
       <a href="#" class="header__link">
-        <img src="../img/logo.svg" alt="Логотип" class="header__logo">
+        <img src="../img/logo.svg" alt="Логотип" class="header__logo center__logo">
       </a>
       <div class="center__user user-block">
         <a href="#" class="user-block__link">
@@ -111,7 +143,7 @@
          </svg>
         </a>
       </div>
-      <nav class="header__nav nav" title="">
+      <nav class="header__nav nav header__nav--1920" title="">
         <ul class="nav__list list-reset">
           <li class="nav__item">
             <a href="#" class="nav__link">Каталог</a>
@@ -136,7 +168,7 @@
     </div>
     <div class="header__bottom bottom">
       <div class="bottom__wrapper">
-        <form action="#" class="header__search search">
+        <form action="#" class="bottom__search search">
           <label class="search__label">
             <input type="search" name="Поиск" class="input-reset search__input" placeholder="Я хочу купить...">
             <svg class="search__pic">
@@ -217,6 +249,7 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
+    <button class="btn btn--primary btn--320 hero__btn-320 btn-reset">Получить</button>
   </div>
 </section>
 
@@ -226,7 +259,7 @@
       <h2 class="title offers__title">
         Специальные предложения
       </h2>
-      <div class="offers__btn">
+      <div class="offers__btn offers__btn--1920">
                 <button class="swiper-button-prev"></button>
                 <button class="swiper-button-next"></button>
             </div>
@@ -243,7 +276,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Кресло велюровое<br>«X-24»
                 </h3>
                 <div class="card__inner">
@@ -265,7 +298,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Диван тканевый<br>«Z-44»
                 </h3>
                 <div class="card__inner">
@@ -288,7 +321,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Будильник<br>«Quartz-23»
                 </h3>
                 <div class="card__inner">
@@ -310,7 +343,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Мини-скульптура<br> «Oh my deer»
                 </h3>
                 <div class="card__inner">
@@ -332,7 +365,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Диван вел-флок<br>«Z-85»
                 </h3>
                 <div class="card__inner">
@@ -355,7 +388,7 @@
             </div>
             <div class="card__bottom">
               <div class="card__wrapper">
-                <h3 class="card__subtitle subtitle">
+                <h3 class="card__subtitle subtitle subtitle--big">
                   Термометр + гидрометр «H-18»
                 </h3>
                 <div class="card__inner">
@@ -369,6 +402,10 @@
         </div>
       </div>
     </div>
+    <div class="offers__btn offers__btn--320">
+      <button class="swiper-button-prev"></button>
+      <button class="swiper-button-next"></button>
+    </div>
   </div>
 </section>
 
@@ -377,7 +414,7 @@
     <h2 class="title high-rating__title">
       Высокий рейтинг
     </h2>
-    <ul class="high-rating__cards list-reset">
+    <ul class="high-rating__cards list-reset tabs">
       <li class="card tabs__content tabs__content--active" data-tabs-target="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
@@ -385,10 +422,14 @@
       5,0
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/r-94.png" alt="Диван кожаный" class="card__img">
+      <picture>
+        <source srcset="../img/r-94-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/r-94.webp" type="image/webp">
+        <img loading="lazy" src="../img/r-94.png" alt="Диван кожаный" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван кожаный<br>«R-94»
         </h3>
@@ -396,7 +437,7 @@
           <span class="card__price card__price--rating">94 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -407,10 +448,14 @@
       4,9
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/t-75.png" alt="Диван апартековый" class="card__img">
+      <picture>
+        <source srcset="../img/t-75-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/t-75.webp" type="image/webp">
+        <img loading="lazy" src="../img/t-75.png" alt="Диван апартековый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван апартековый<br>«T-75»
         </h3>
@@ -418,7 +463,7 @@
           <span class="card__price card__price--rating">69 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -429,10 +474,14 @@
       4,8
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/d-31.png" alt="Диван тканевый" class="card__img">
+      <picture>
+        <source srcset="../img/d-31-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/d-31.webp" type="image/webp">
+        <img loading="lazy" src="../img/d-31.png" alt="Диван тканевый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван тканевый<br>«D-31»
         </h3>
@@ -440,7 +489,7 @@
           <span class="card__price card__price--rating">28 490 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -451,10 +500,14 @@
       4,8
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/y-68.png" alt="Диван велюровый" class="card__img">
+      <picture>
+        <source srcset="../img/y-68-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/y-68.webp" type="image/webp">
+        <img loading="lazy" src="../img/y-68.png" alt="Диван велюровый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван велюровый<br>«Y-68»
         </h3>
@@ -462,7 +515,7 @@
           <span class="card__price card__price--rating">22 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -473,10 +526,14 @@
       4,8
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/w-95.png" alt="Диван из шинила" class="card__img">
+      <picture>
+        <source srcset="../img/w-95-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/w-95.webp" type="image/webp">
+        <img loading="lazy" src="../img/w-95.png" alt="Диван из шинила" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван из шинила<br>«W-95»
         </h3>
@@ -484,7 +541,7 @@
           <span class="card__price card__price--rating">22 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -495,10 +552,14 @@
       4,8
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/g-41.png" alt="Диван флоковый" class="card__img">
+      <picture>
+        <source srcset="../img/g-41-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/g-41.webp" type="image/webp">
+        <img loading="lazy" src="../img/g-41.png" alt="Диван флоковый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван флоковый<br>«G-41»
         </h3>
@@ -506,7 +567,7 @@
           <span class="card__price card__price--rating">17 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -517,10 +578,14 @@
       4,8
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/v-43.png" alt="Диван шиниловый" class="card__img">
+      <picture>
+        <source srcset="../img/v-43-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/v-43.webp" type="image/webp">
+        <img loading="lazy" src="../img/v-43.png" alt="Диван шиниловый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван шиниловый<br>«V-43»
         </h3>
@@ -528,7 +593,7 @@
           <span class="card__price card__price--rating">19 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -539,10 +604,14 @@
       4,7
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/s-99.png" alt="Диван велюровый" class="card__img">
+      <picture>
+        <source srcset="../img/s-99-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/s-99.webp" type="image/webp">
+        <img loading="lazy" src="../img/s-99.png" alt="Диван велюровый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван велюровый<br>«S-99»
         </h3>
@@ -550,7 +619,7 @@
           <span class="card__price card__price--rating">19 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -561,10 +630,14 @@
       4,7
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/f-85.png" alt="Диван из кожзама" class="card__img">
+      <picture>
+        <source srcset="../img/f-85-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/f-85.webp" type="image/webp">
+        <img loading="lazy" src="../img/f-85.png" alt="Диван из кожзама" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван из кожзама<br>«F-85»
         </h3>
@@ -572,7 +645,7 @@
           <span class="card__price card__price--rating">26 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -583,10 +656,14 @@
       4,6
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/h-64.png" alt="Диван флоковый" class="card__img">
+      <picture>
+        <source srcset="../img/h-64-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/h-64.webp" type="image/webp">
+        <img loading="lazy" src="../img/h-64.png" alt="Диван флоковый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван флоковый<br>«H-64»
         </h3>
@@ -594,7 +671,7 @@
           <span class="card__price card__price--rating">25 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -605,10 +682,14 @@
       4,6
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/h-58.png" alt="Диван флоковый" class="card__img">
+      <picture>
+        <source srcset="../img/h-58-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/h-58.webp" type="image/webp">
+        <img loading="lazy" src="../img/h-58.png" alt="Диван флоковый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван флоковый<br>«H-58»
         </h3>
@@ -616,7 +697,7 @@
           <span class="card__price card__price--rating">23 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -627,10 +708,14 @@
       4,6
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/r-43.png" alt="Диван из кожзама" class="card__img">
+      <picture>
+        <source srcset="../img/r-43-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/r-43.webp" type="image/webp">
+        <img loading="lazy" src="../img/r-43.png" alt="Диван из кожзама" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван из кожзама<br>«R-43»
         </h3>
@@ -638,7 +723,7 @@
           <span class="card__price card__price--rating">33 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -649,10 +734,14 @@
       4,6
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/c-42.png" alt="Диван из шинила" class="card__img">
+      <picture>
+        <source srcset="../img/c-42-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/c-42.webp" type="image/webp">
+        <img loading="lazy" src="../img/c-42.png" alt="Диван из шинила" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван из шинила<br>«С-42»
         </h3>
@@ -660,7 +749,7 @@
           <span class="card__price card__price--rating">18 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -671,10 +760,14 @@
       4,6
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/u-58.png" alt="Диван велюровый" class="card__img">
+      <picture>
+        <source srcset="../img/u-58-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/u-58.webp" type="image/webp">
+        <img loading="lazy" src="../img/u-58.png" alt="Диван велюровый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван велюровый<br>«U-58»
         </h3>
@@ -682,7 +775,7 @@
           <span class="card__price card__price--rating">21 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -693,10 +786,14 @@
       4,5
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/f-41.png" alt="Диван велюровый" class="card__img">
+      <picture>
+        <source srcset="../img/f-41-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/f-41.webp" type="image/webp">
+        <img loading="lazy" src="../img/f-41.png" alt="Диван велюровый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван флоковый<br>«F-41»
         </h3>
@@ -704,7 +801,7 @@
           <span class="card__price card__price--rating">17 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -715,10 +812,14 @@
       4,5
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/r-85.png" alt="Диван флоковый" class="card__img">
+      <picture>
+        <source srcset="../img/r-85-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/r-85.webp" type="image/webp">
+        <img loading="lazy" src="../img/r-85.png" alt="Диван флоковый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван велюровый<br>«R-85»
         </h3>
@@ -726,7 +827,7 @@
           <span class="card__price card__price--rating">34 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -737,10 +838,14 @@
       4,5
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/s-44.png" alt="Диван велюровый" class="card__img">
+      <picture>
+        <source srcset="../img/s-44-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/s-44.webp" type="image/webp">
+        <img loading="lazy" src="../img/s-44.png" alt="Диван велюровый" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван велюровый<br>«S-44»
         </h3>
@@ -748,7 +853,7 @@
           <span class="card__price card__price--rating">19 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -759,10 +864,14 @@
       4,5
     </span>
     <div class="card__top card__top--rating">
-      <img src="../img/c-80.png" alt="Диван из шинила" class="card__img">
+      <picture>
+        <source srcset="../img/c-80-320.webp" type="image/webp" media="(max-width: 450px)">
+        <source srcset="../img/c-80.webp" type="image/webp">
+        <img loading="lazy" src="../img/c-80.png" alt="Диван из шинила" class="card__img">
+      </picture>
     </div>
     <div class="card__bottom card__bottom--rating">
-      <div class="card__wrapper">
+      <div class="card__wrapper card__wrapper--rating">
         <h3 class="card__subtitle subtitle">
           Диван из шинила<br>«С-80»
         </h3>
@@ -770,7 +879,7 @@
           <span class="card__price card__price--rating">20 990 руб</span>
         </div>
       </div>
-      <a href="#" class="card__btn btn" target="_blank">Купить</a>
+      <a href="#" class="card__btn card__btn--rating btn" target="_blank">Купить</a>
     </div>
   </article>
 </li>
@@ -784,11 +893,15 @@
 
         <section class="oxford">
   <div class="container oxford__container">
-    <h2 class="oxford__title">
-      Оксфорд 1950
-    </h2>
-    <span class="oxford__descr">Новая коллекция<br>изысканных кресел </span>
-    <a href="#" class="oxford__btn btn btn--primary btn-reset">Ознакомиться</a>
+    <div class="oxford__wrapper">
+      <h2 class="oxford__title">
+        Оксфорд 1950
+      </h2>
+      <span class="oxford__descr">Новая коллекция<br>изысканных кресел </span>
+    </div>
+    <div class="oxford__box">
+      <a href="#" class="oxford__btn btn btn--primary btn--320 btn-reset">Ознакомиться</a>
+    </div>
   </div>
 </section>
 
@@ -811,8 +924,9 @@
               <a href="#" class="catalog__link">Модульные</a>
             </li>
           </ul>
-          <h3 class="subtitle categories__subtitle">
+          <h3 class="subtitle subtitle--big categories__subtitle">
             Диваны
+            <span class="categories__arrow arrow-link arrow-link--categories"></span>
           </h3>
         </div>
         <div class="categories__bg categories__bg--1">
@@ -823,16 +937,17 @@
       </li>
       <li class="categories__item categories__item--2">
         <div class="categories__wrapper">
-          <ul class="list-reset categories__catalog catalog">
+          <ul class="list-reset categories__catalog catalog catalog--mini">
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Мягкие</a>
+              <a href="#" class="catalog__link catalog__link--mini">Мягкие</a>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Кресла-кровати</a>
+              <a href="#" class="catalog__link catalog__link--mini">Кресла-кровати</a>
             </li>
           </ul>
           <h3 class="subtitle categories__subtitle">
             Кресла
+            <span class="categories__arrow arrow-link arrow-link--categories"></span>
           </h3>
         </div>
         <div class="categories__bg categories__bg--2">
@@ -843,16 +958,17 @@
       </li>
       <li class="categories__item categories__item--3">
         <div class="categories__wrapper">
-          <ul class="list-reset categories__catalog catalog">
+          <ul class="list-reset categories__catalog catalog catalog--mini">
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Односпальные</a>
+              <a href="#" class="catalog__link catalog__link--mini">Односпальные</a>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Двуспальные</a>
+              <a href="#" class="catalog__link catalog__link--mini">Двуспальные</a>
             </li>
           </ul>
           <h3 class="subtitle categories__subtitle">
             Кровати
+            <span class="categories__arrow arrow-link arrow-link--categories"></span>
           </h3>
         </div>
         <div class="categories__bg categories__bg--3">
@@ -863,16 +979,17 @@
       </li>
       <li class="categories__item categories__item--4">
         <div class="categories__wrapper">
-          <ul class="list-reset categories__catalog catalog">
+          <ul class="list-reset categories__catalog catalog catalog--mini">
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Тумбы</a>
+              <a href="#" class="catalog__link catalog__link--mini">Тумбы</a>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Комоды</a>
+              <a href="#" class="catalog__link catalog__link--mini">Комоды</a>
             </li>
           </ul>
-          <h3 class="subtitle categories__subtitle">
+          <h3 class="subtitle categories__subtitle categories__subtitle--mini">
             Тумбы и комоды
+            <span class="categories__arrow arrow-link arrow-link--categories"></span>
           </h3>
         </div>
         <div class="categories__bg categories__bg--4">
@@ -883,16 +1000,17 @@
       </li>
       <li class="categories__item categories__item--5">
         <div class="categories__wrapper">
-          <ul class="list-reset categories__catalog catalog">
+          <ul class="list-reset categories__catalog catalog catalog--mini">
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Деревянные</a>
+              <a href="#" class="catalog__link catalog__link--mini">Деревянные</a>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link">Металлокаркас</a>
+              <a href="#" class="catalog__link catalog__link--mini">Металлокаркас</a>
             </li>
           </ul>
           <h3 class="subtitle categories__subtitle">
             Стулья
+            <span class="categories__arrow arrow-link arrow-link--categories"></span>
           </h3>
         </div>
         <div class="categories__bg categories__bg--5">
@@ -911,7 +1029,7 @@
       <h2 class="title useful__title">
         Полезное
       </h2>
-      <div class="useful__btn">
+      <div class="useful__btn useful__btn--1920">
                 <button class="swiper2-button-prev"></button>
                 <button class="swiper2-button-next"></button>
             </div>
@@ -959,6 +1077,10 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="useful__btn useful__btn--320">
+      <button class="swiper2-button-prev"></button>
+      <button class="swiper2-button-next"></button>
     </div>
   </div>
 </section>

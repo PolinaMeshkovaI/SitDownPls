@@ -6,6 +6,9 @@
       padding-top: 70px;
       padding-bottom: 73px;
     }
+    @media (max-width: 765px) {
+      padding-bottom: 82px;
+    }
   }
   &__list {
     display: grid;
@@ -14,23 +17,37 @@
     @media (max-width: 1840px) {
       grid-template-columns: repeat(3, 1fr);
     }
+    @media (max-width: 1008px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 765px) {
+      row-gap: 32px;
+      column-gap: 16px;
+    }
   }
   &__item {
     position: relative;
     display: flex;
     padding: 30px;
-    min-height: 511px;
+    min-height: 512px;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     background: $grey-light;
     border-radius: 10px;
+    @media (max-width: 765px) {
+      padding: 14px;
+    }
     &--1 {
       grid-column-start: 1;
       grid-column-end: 4;
       @media (max-width: 1840px) {
         grid-column-start: 1;
         grid-column-end: 3;
+      }
+      @media (max-width: 765px) {
+        min-height: 332px;
+        padding: 30px;
       }
     }
     &--2 {
@@ -41,6 +58,15 @@
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
+      }
+      @media (max-width: 1008px) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      @media (max-width: 765px) {
+        min-height: 206px;
       }
     }
     &--3 {
@@ -53,6 +79,16 @@
         grid-row-start: 1;
         grid-row-end: 2;
       }
+      @media (max-width: 1008px) {
+        min-height: 512px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      @media (max-width: 765px) {
+        min-height: 206px;
+      }
     }
     &--4 {
       min-height: 405px;
@@ -61,6 +97,14 @@
       @media (max-width: 1840px) {
         grid-column-start: 1;
         grid-column-end: 2;
+      }
+      @media (max-width: 1008px) {
+        min-height: 512px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      @media (max-width: 765px) {
+        min-height: 206px;
       }
     }
     &--5 {
@@ -71,16 +115,35 @@
         grid-column-start: 3;
         grid-column-end: 4;
       }
+      @media (max-width: 1008px) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+      @media (max-width: 765px) {
+        min-height: 206px;
+      }
+    }
+  }
+  &__arrow {
+    display: none;
+    @media (max-width: 765px) {
+      display: inline-block;
     }
   }
   &__subtitle {
     margin-bottom: 30px;
+    @media (max-width: 765px) {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+    }
+    &--mini {
+      line-height: 104%;
+    }
   }
   &__bg {
     position: absolute;
-    // margin-bottom: 32px;
     width: 100%;
-    // min-height: 306px;
     left: 0;
     bottom: 78px;
     background-position: left;
@@ -89,15 +152,33 @@
     @media (max-width: 1840px) {
       bottom: 88px;
     }
+    @media (max-width: 765px) {
+      bottom: 12px;
+    }
     &--1 {
-      min-height: 306px;
+      min-height: 308px;
       background-image: url(../../img/categories_sofa.png);
+      @media (max-width: 1008px) {
+        bottom: 81px;
+      }
+      @media (max-width: 765px) {
+        min-height: 212px;
+        bottom: 13px;
+        background-image: url(../../img/categories_sofa_320.png);
+      }
     }
     &--2 {
       min-height: 306px;
       background-image: url(../../img/categories_armchair.png);
       @media (max-width: 1840px) {
         background-image: url(../../img/categories_armchair_1024.png);
+      }
+      @media (max-width: 1840px) {
+        min-height: 296px;
+      }
+      @media (max-width: 765px) {
+        min-height: 104px;
+        background-image: url(../../img/categories_armchair_320.png);
       }
     }
     &--3 {
@@ -109,6 +190,10 @@
         min-height: 296px;
         background-image: url(../../img/categories_bed_1024.png);
       }
+      @media (max-width: 765px) {
+        min-height: 104px;
+        background-image: url(../../img/categories_bed_320.png);
+      }
     }
     &--4 {
       max-width: 330px;
@@ -117,6 +202,10 @@
       @media (max-width: 1840px) {
         min-height: 296px;
         background-image: url(../../img/categories_dresser_1024.png);
+      }
+      @media (max-width: 765px) {
+        min-height: 104px;
+        background-image: url(../../img/categories_dresser_320.png);
       }
     }
     &--5 {
@@ -127,16 +216,38 @@
         min-height: 296px;
         background-image: url(../../img/categories_chair_1024.png);
       }
+      @media (max-width: 1840px) {
+        max-width: 264px;
+      }
+      @media (max-width: 765px) {
+        min-height: 104px;
+        background-image: url(../../img/categories_chair_320.png);
+      }
+    }
+  }
+  &__link {
+    @media (max-width: 765px) {
+      display: none;
     }
   }
 }
 .catalog {
   display: flex;
   margin-bottom: 14px;
+  &--mini {
+    @media (max-width: 765px) {
+      flex-direction: column;
+      margin-bottom: 7px;
+      line-height: 1;
+    }
+  }
   &__item:not(:last-child) {
     margin-right: 22px;
     @media (max-width: 1840px) {
       margin-right: 30px;
+    }
+    @media (max-width: 765px) {
+      margin-right: 20px;
     }
   }
   &__link {
@@ -144,5 +255,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
+    &--mini {
+      @media (max-width: 765px) {
+        font-size: 10px;
+      }
+    }
   }
 }

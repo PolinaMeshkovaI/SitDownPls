@@ -4,6 +4,7 @@ $content-width: 1920px;
 $container-offset: 320px;
 $container-offset-1024: 36px;
 $container-offset-768: 72px;
+$container-offset-320: 12px;
 $container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 $container-width-1024: calc(var(--content-width) + (var(--container-offset-1024) * 2));
 $gap: 69px;

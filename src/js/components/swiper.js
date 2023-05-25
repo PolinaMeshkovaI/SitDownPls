@@ -22,6 +22,17 @@ export const swiper= () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      766: {
+        slidesPerView: 2,
+      },
+      1018: {
+        slidesPerView: "auto",
+      }
+    }
   });
 
   const swiperUseful = new Swiper('.swiper-useful', {
@@ -32,7 +43,7 @@ export const swiper= () => {
         slidesPerView: 2,
         spaceBetween: 32,
       },
-      840: {
+      925: {
         slidesPerView: 3,
         spaceBetween: 32,
       },

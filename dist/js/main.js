@@ -3193,19 +3193,20 @@ function withinMaxClamp(min, value, max) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_castom_choices__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/castom-choices */ "./src/js/components/castom-choices.js");
-/* harmony import */ var _components_swiper_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiper_hero */ "./src/js/components/swiper_hero.js");
+/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiper */ "./src/js/components/swiper.js");
 /* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/show-more */ "./src/js/components/show-more.js");
 /* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
 /* harmony import */ var _components_tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tooltip */ "./src/js/components/tooltip.js");
 /* harmony import */ var _components_range_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/range-slider */ "./src/js/components/range-slider.js");
 /* harmony import */ var _components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs-btn */ "./src/js/components/tabs-btn.js");
-/* harmony import */ var _components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal-buy-in-one-click */ "./src/js/components/modal-buy-in-one-click.js");
-/* harmony import */ var _components_modal_success_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal-success-form */ "./src/js/components/modal-success-form.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal-buy-in-one-click */ "./src/js/components/modal-buy-in-one-click.js");
+/* harmony import */ var _components_modal_success_form__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modal-success-form */ "./src/js/components/modal-success-form.js");
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
 
-(0,_components_swiper_hero__WEBPACK_IMPORTED_MODULE_1__.swiper)();
+(0,_components_swiper__WEBPACK_IMPORTED_MODULE_1__.swiper)();
 
 (0,_components_show_more__WEBPACK_IMPORTED_MODULE_2__.showMore)();
 
@@ -3217,9 +3218,11 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_components_tabs_btn__WEBPACK_IMPORTED_MODULE_6__.tabsBtn)();
 
-(0,_components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__.modalOneClick)();
+(0,_components_burger__WEBPACK_IMPORTED_MODULE_7__.burger)();
 
-(0,_components_modal_success_form__WEBPACK_IMPORTED_MODULE_8__.modalSuccessForm)();
+(0,_components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_8__.modalOneClick)();
+
+(0,_components_modal_success_form__WEBPACK_IMPORTED_MODULE_9__.modalSuccessForm)();
 
 /***/ }),
 
@@ -3239,6 +3242,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/burger.js":
+/*!*************************************!*\
+  !*** ./src/js/components/burger.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "burger": () => (/* binding */ burger)
+/* harmony export */ });
+const burger = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.header__nav--768');
+    const close = document.querySelector('.nav__close');
+    burger.addEventListener('click', function () {
+      console.log("bhj");
+      burger.classList.add('burger--active');
+      menu.classList.add('header__nav--active');
+      document.body.classList.add('dis-scroll');
+    });
+    close.addEventListener('click', function () {
+      burger.classList.remove('burger--active');
+      menu.classList.remove('header__nav--active');
+      document.body.classList.remove('dis-scroll');
+    });
+  });
+};
 
 /***/ }),
 
@@ -3410,20 +3445,24 @@ __webpack_require__.r(__webpack_exports__);
 const showMore = () => {
   const showMoreBtn = document.querySelector('.high-rating__btn');
   const mediaQuery1024 = window.matchMedia('(max-width: 1840px)');
+  const mediaQuery768 = window.matchMedia('(max-width: 1080px)');
   let items;
   function showMore(n) {
     showMoreBtn.addEventListener('click', () => {
       items += n;
-      const arrayCard = Array.from(document.querySelector('.high-rating__cards').children);
-      const visItems = arrayCard.slice(0, items);
+      const arrayCards = Array.from(document.querySelector('.high-rating__cards').children);
+      const visItems = arrayCards.slice(0, items);
       visItems.forEach(el => el.classList.add('is-visible'));
-      if (visItems.length === arrayCard.length) {
+      if (visItems.length === arrayCards.length) {
         showMoreBtn.setAttribute('disabled', 'disabled');
       }
     });
   }
   if (showMoreBtn) {
-    if (mediaQuery1024.matches) {
+    if (mediaQuery768.matches) {
+      items = 6;
+      showMore(2);
+    } else if (mediaQuery1024.matches) {
       items = 6;
       showMore(3);
     } else {
@@ -3435,10 +3474,10 @@ const showMore = () => {
 
 /***/ }),
 
-/***/ "./src/js/components/swiper_hero.js":
-/*!******************************************!*\
-  !*** ./src/js/components/swiper_hero.js ***!
-  \******************************************/
+/***/ "./src/js/components/swiper.js":
+/*!*************************************!*\
+  !*** ./src/js/components/swiper.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3468,6 +3507,17 @@ const swiper = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      766: {
+        slidesPerView: 2
+      },
+      1018: {
+        slidesPerView: "auto"
+      }
     }
   });
   const swiperUseful = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-useful', {
@@ -3478,7 +3528,7 @@ const swiper = () => {
         slidesPerView: 2,
         spaceBetween: 32
       },
-      840: {
+      925: {
         slidesPerView: 3,
         spaceBetween: 32
       },

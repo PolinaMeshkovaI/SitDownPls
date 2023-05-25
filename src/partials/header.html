@@ -1,5 +1,10 @@
 <header class="header">
   <div class="container header__container">
+    <div class="header__top-320">
+      <a href="#" class="header__link">
+        <img src="../img/logo.svg" alt="Логотип" class="header__logo">
+      </a>
+    </div>
     <div class="header__top top">
       <div class="top__contacts">
         <form class="top__select">
@@ -69,11 +74,38 @@
       </div>
     </div>
     <div class="header__center center">
+      <nav class="header__nav nav header__nav--768" title="">
+        <button class="nav__close btn-reset">
+          <svg aria-label="Кнопка закрытия меню" class="nav__close nav__close--img" width="24" height="24">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Магазины</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Шоу-рум</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Дисконт</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
         <span class="burger__line"></span>
       </button>
       <a href="#" class="header__link">
-        <img src="../img/logo.svg" alt="Логотип" class="header__logo">
+        <img src="../img/logo.svg" alt="Логотип" class="header__logo center__logo">
       </a>
       <div class="center__user user-block">
         <a href="#" class="user-block__link">
@@ -88,7 +120,7 @@
          </svg>
         </a>
       </div>
-      <nav class="header__nav nav" title="">
+      <nav class="header__nav nav header__nav--1920" title="">
         <ul class="nav__list list-reset">
           <li class="nav__item">
             <a href="#" class="nav__link">Каталог</a>
@@ -113,7 +145,7 @@
     </div>
     <div class="header__bottom bottom">
       <div class="bottom__wrapper">
-        <form action="#" class="header__search search">
+        <form action="#" class="bottom__search search">
           <label class="search__label">
             <input type="search" name="Поиск" class="input-reset search__input" placeholder="Я хочу купить...">
             <svg class="search__pic">

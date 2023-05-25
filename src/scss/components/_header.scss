@@ -2,6 +2,16 @@
   &__container {
     padding: 0;
   }
+  &__top-320 {
+    display: none;
+    padding: 11px $container-offset-320;
+    background-color: $grey_light;
+    @media (max-width: 765px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   &__top {
     @include flex-all-sb;
     padding: 4px 320px;
@@ -12,6 +22,9 @@
     }
     @media (max-width: 1008px) {
       padding: 7px $container-offset-768;
+    }
+    @media (max-width: 765px) {
+      padding: 5px $container-offset-320 16px;
     }
   }
   &__center {
@@ -26,6 +39,9 @@
     @media (max-width: 1008px) {
       padding: 28px $container-offset-768;
     }
+    @media (max-width: 765px) {
+      padding: 7px $container-offset-320;
+    }
   }
   &__center-grey {
     padding: 6px $container-offset-1024;
@@ -34,8 +50,28 @@
     }
   }
   &__nav {
-    @media (max-width: 1008px) {
-     display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    padding-top: 15px;
+    padding-left: 21px;
+    overflow-y: auto;
+    background-color: $pink_light;
+    visibility: hidden;
+    transform: translateX(120%);
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    &--active {
+        visibility: visible;
+        transform: translateX(0);
+    }
+    &--1920 {
+      display: block;
+      @media (max-width: 1008px) {
+        display: none;
+       }
     }
   }
   &__bottom {
@@ -46,25 +82,21 @@
       padding-left: $container-offset-1024;
       padding-right: $container-offset-1024;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1008px) {
       padding-left: $container-offset-768;
       padding-right: $container-offset-768;
     }
-  }
-  &__search {
-    position: relative;
-    min-width: 761px;
-    background-color: $grey_light;
-    @media (max-width: 1840px) {
-      min-width: calc(100% - 300px);
-    }
-    @media (max-width: 1008px) {
-      min-width: calc(100% - 189px);
+    @media (max-width: 765px) {
+      padding-left: $container-offset-320;
+      padding-right: $container-offset-320;
     }
   }
   &__link {
     @media (max-width: 1008px) {
       margin-left: 76px;
+    }
+    @media (max-width: 765px) {
+      margin-left: 0;
     }
   }
 }
@@ -74,6 +106,10 @@
     @media (max-width: 1840px) {
       width: 100%;
     }
+    @media (max-width: 765px) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
   &__select {
     @include flex-all-sb;
@@ -82,6 +118,9 @@
     color: $black;
     @media (max-width: 1840px) {
       font-size: 16px;
+    }
+    @media (max-width: 765px) {
+      margin-bottom: 5px;
     }
   }
   &__select .choices {
@@ -189,6 +228,19 @@
     }
   }
 }
+.center {
+  &__logo {
+    @media (max-width: 765px) {
+      display: none;
+    }
+  }
+  &__user {
+    display: none;
+    @media (max-width: 1008px) {
+      display: block;
+    }
+  }
+}
 .center-grey {
   display: none;
   align-items: center;
@@ -205,10 +257,16 @@
       display: none;
     }
   }
+  @media (max-width: 765px) {
+    display: none;
+  }
 }
 .menu {
   &__list {
     @include flex-all-sb;
+  }
+  &__item {
+    display: inline-block;
   }
   &__item:not(:last-child) {
     margin-right: 64px;
@@ -228,7 +286,7 @@
     }
     &:hover {
       color: $primary_light;
-      background-color: none;
+      background-color: transparent;
     }
     &:active {
       color: $primary_shade;
@@ -249,8 +307,26 @@
   z-index: 25;
 }
 .nav {
+  // display: flex;
+  // flex-direction: column;
+  &__close {
+    &--img {
+      fill: $primary;
+      transition: fill 0.3s ease-in-out;
+      &:hover {
+        fill: $primary_light;
+      }
+      &:active {
+        fill: $primary_shade;
+      }
+    }
+  }
   &__list {
     @include flex-v-center;
+    @media (max-width: 1008px) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
   &__link {
     font-size: 16px;
@@ -275,6 +351,10 @@
     @media (max-width: 1840px) {
       margin-right: 41px;
     }
+    @media (max-width: 1008px) {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
   }
 }
 .bottom {
@@ -285,12 +365,39 @@
       align-items: center;
       width: 100%;
     }
+    @media (max-width: 765px) {
+      flex-direction: column;
+      padding-top: 16px;
+    }
+  }
+  &__search {
+    position: relative;
+    min-width: 761px;
+    background-color: $grey_light;
+    @media (max-width: 1840px) {
+      min-width: calc(100% - 300px);
+    }
+    @media (max-width: 1008px) {
+      min-width: calc(100% - 189px);
+    }
+    @media (max-width: 765px) {
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  }
+  &__select {
+    @media (max-width: 765px) {
+      width: 100%;
+    }
   }
   &__select .choices {
     background-color: none;
     width: 300px;
     @media (max-width: 1008px) {
       width: 189px;
+    }
+    @media (max-width: 765px) {
+      width: 100%;
     }
     &__inner {
       position: relative;
@@ -302,6 +409,9 @@
       border-radius: 0px 10px 10px 0px;
       z-index: 30;
       transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      @media (max-width: 765px) {
+        border-radius: 10px;
+      }
       &:hover {
         color: $primary;
         border-color: $primary;
@@ -331,6 +441,9 @@
         & .choices__item--selectable {
           padding-left: 30px;
           padding-bottom: 10px;
+          @media (max-width: 1008px) {
+            padding-left: 10px;
+          }
         }
       }
     }
@@ -382,6 +495,9 @@
   // width: 100%;
   // width: calc(100%-300px);
   border-radius: 10px 0px 0px 10px;
+  @media (max-width: 765px) {
+    border-radius: 10px;
+  }
   &__input {
     position: relative;
     width: 100%;
@@ -392,6 +508,9 @@
     border-radius: 10px 0px 0px 10px;
     background-color: $grey_light;
     transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out, outline-color 0.3 ease-in-out;
+    @media (max-width: 765px) {
+      border-radius: 10px;
+    }
       &:focus-visible  {
         background-color: $pink_light;
         outline-color: $primary;

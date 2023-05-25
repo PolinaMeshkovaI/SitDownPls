@@ -20,6 +20,7 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  overflow-x: hidden
 }
 
 img {
@@ -91,6 +92,9 @@ a {
   @media (max-width: 1008px) {
     padding: 0 $container-offset-768;
   }
+  @media (max-width: 765px) {
+    padding: 0 $container-offset-320;
+  }
   &--cooperation {
     padding-right: 758px;
     margin-bottom: 34px;
@@ -117,6 +121,13 @@ a {
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
+  @media (max-width: 1008px) {
+    margin-bottom: 24px;
+  }
+  @media (max-width: 765px) {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
 }
 
 .subtitle {
@@ -124,6 +135,14 @@ a {
   font-weight: 400;
   font-size: 24px;
   line-height: 130%;
+  @media (max-width: 765px) {
+    font-size: 16px;
+  }
+  &--big {
+    @media (max-width: 765px) {
+      font-size: 24px;
+    }
+  }
   &--cooperation {
     margin-bottom: 12px;
   }
@@ -139,16 +158,20 @@ a {
 
 .btn {
   display: block;
-  padding: 19px 35px;
+  padding: 19px 34px;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   border: 2px solid $primary;
   border-radius: 10px;
   cursor: pointer;
+  transition: background 0.5s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   &--primary {
     background: $primary;
     color: $light-color;
+  }
+  &--320 {
+    width: 100%;
   }
 }
 
@@ -159,6 +182,10 @@ a {
   font-weight: 700;
   line-height: 120%;
   transition: border-bottom 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &--categories {
+    position: absolute;
+    bottom: 22px;
+  }
   &:focus {
     border-bottom: 2px solid $primary;
   }
@@ -184,6 +211,7 @@ a {
   &:active::before {
     background: $primary-shade;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -201,7 +229,7 @@ a {
     position: absolute;
     width: 8px;
     height: 8px;
-    top: 34%;
+    top: 7px;
     right: -18px;
     border-bottom: 2px solid $primary;
     border-right: 2px solid $primary;

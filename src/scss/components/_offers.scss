@@ -4,10 +4,13 @@
   overflow: hidden;
 }
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next{
 	position: static;
-	margin-left: 13px;
 }
+.swiper-button-prev {
+  margin-right: 13px;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
@@ -98,6 +101,9 @@
     @media (max-width: 1840px) {
       padding-top: 70px;
     }
+    @media (max-width: 765px) {
+      padding-top: 74px;
+    }
   }
   &__card {
     min-height: 460px;
@@ -112,6 +118,19 @@
   &__btn {
     display: flex;
     align-items: center;
+    &--1920 {
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+    &--320 {
+      display: none;
+      margin-top: 35px;
+      justify-content: center;
+      @media (max-width: 765px) {
+        display: flex;
+      }
+    }
   }
   &__swiper {
     width: 100%;
