@@ -98,6 +98,16 @@ a {
   &--cooperation {
     padding-right: 758px;
     margin-bottom: 34px;
+    @media (max-width: 1840px) {
+      padding-right: 150px;
+    }
+    @media (max-width: 1008px) {
+      padding-right: 67px;
+    }
+    @media (max-width: 765px) {
+      padding-right: 13px;
+      margin-bottom: 31px;
+    }
   }
 }
 
@@ -144,7 +154,10 @@ a {
     }
   }
   &--cooperation {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
+    @media (max-width: 1840px) {
+      margin-bottom: 13px;
+    }
   }
 }
 

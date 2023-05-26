@@ -1,14 +1,27 @@
 .cooperation-warranty {
   margin-bottom: 68px;
+  @media (max-width: 1008px) {
+    margin-bottom: 73px;
+  }
+  @media (max-width: 765px) {
+    margin-bottom: 70px;
+  }
   &__list {
     margin-bottom: 32px;
     padding: 0;
     list-style: none;
     counter-reset: list-numbers;
+    @media (max-width: 765px) {
+      margin-top: 10px;
+    }
   }
   &__item {
     position: relative;
     padding-left: 26px;
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 179%;
+    }
     &::before {
       counter-increment: list-numbers;
       content: counter(list-numbers)".";
@@ -34,5 +47,15 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
+    @media (max-width: 765px) {
+      padding-left: 52px;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 16px;
+      line-height: 150%;
+      background-size: 36px 54px;
+      background-position: left center;
+    }
+
   }
 }

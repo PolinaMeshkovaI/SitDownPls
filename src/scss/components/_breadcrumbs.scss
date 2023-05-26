@@ -2,6 +2,12 @@
   margin-top: 19px;
   margin-bottom: 30px;
   display: flex;
+  @media (max-width: 1008px) {
+    margin-top: 22px;
+  }
+  @media (max-width: 765px) {
+    display: none;
+  }
   &__item {
     position: relative;
     &:not(:last-child) {

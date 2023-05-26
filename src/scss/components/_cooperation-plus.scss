@@ -1,13 +1,32 @@
 .cooperation-plus {
   &__wrapper:not(:last-child) {
     margin-bottom: 13px;
+    @media (max-width: 1840px) {
+      margin-bottom: 9px;
+    }
+  }
+  &__subtitle {
+    @media (max-width: 1840px) {
+      margin-bottom: 13px;
+    }
+    @media (max-width: 765px) {
+      font-size: 14px;
+    }
   }
   &__caption {
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     color: $secondary;
+    @media (max-width: 765px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__descr {
+    @media (max-width: 765px) {
+      font-size: 14px;
+    }
   }
 }

@@ -1,6 +1,14 @@
 .cooperation-hero {
   &__title {
     margin-bottom: 34px;
+    @media (max-width: 765px) {
+      margin-top: 35px;
+    }
+  }
+  &__descr {
+    @media (max-width: 765px) {
+     font-size: 14px;
+    }
   }
 }
 

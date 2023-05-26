@@ -6,6 +6,9 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 25px 25px;
+    @media (max-width: 765px) {
+      font-size: 14px;
+    }
     &--1 {
       background-image: url(../../img/network.svg);
     }
