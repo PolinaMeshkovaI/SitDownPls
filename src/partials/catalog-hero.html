@@ -31,12 +31,17 @@
         <h2 class="catalog-hero__title subtitle">
           Каталог
         </h2>
+        <div class="catalog-hero__filters-320 filters-320">
+          <span class="filters-320__label">Фильтры:</span>
+          @include('filters-320.html')
+        </div>
         <ul class="catalog-hero__list list-reset">
           @include('cards.html')
         </ul>
         <div class="catalog-hero__btn tabs__wrapper">
-          <button class="tabs__btn tabs__btn--active" aria-label="Первая страница каталога" data-tabs-path="first">1</button>
-          <button class="tabs__btn" aria-label="Вторая страница каталога" data-tabs-path="second">2</button>
+          <button class="tabs__btn tabs__btn--active" aria-label="Первая страница каталога" data-tabs-path="first" data-tabs-path-mobile="first">1</button>
+          <button class="tabs__btn" aria-label="Вторая страница каталога" data-tabs-path="second" data-tabs-path-mobile="second">2</button>
+          <button class="tabs__btn is-hidden" aria-label="Третья страница каталога" data-tabs-path="third" data-tabs-path-mobile="third">3</button>
         </div>
       </div>
     </div>

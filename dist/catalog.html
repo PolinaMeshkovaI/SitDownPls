@@ -179,7 +179,7 @@
           </button>
         </form>
         <form class="bottom__select">
-          <select name="city" id="product-select"  class="bottom__select choices">
+          <select name="category" id="product-select"  class="bottom__select choices">
             <option value="">Категория</option>
             <option value="sofas">Диваны</option>
             <option value="armchairs">Кресла</option>
@@ -381,8 +381,57 @@
         <h2 class="catalog-hero__title subtitle">
           Каталог
         </h2>
+        <div class="catalog-hero__filters-320 filters-320">
+          <span class="filters-320__label">Фильтры:</span>
+          <form class="filters-320__form">
+  <select name="category" id="category-select"  class="filters-320__select choices">
+    <option value="">Категория</option>
+    <option value="sofas">Диваны</option>
+    <option value="armchairs">Кресла</option>
+    <option value="puffs">Пуфы</option>
+    <option value="beds">Кровати</option>
+    <option value="cabinets">Тумбы</option>
+    <option value="dressers">Комоды</option>
+    <option value="chairs">Стулья</option>
+    <option value="tables">Столы</option>
+    <option value="accessories">Аксессуары</option>
+  </select>
+<!-- </form>
+<form class="filters-320__select"> -->
+  <select name="price" id="price-select"  class="filters-320__select choices">
+    <option value="">Цена</option>
+    <option value="2000">от 2000</option>
+    <option value="10000">от 10000</option>
+    <option value="50000">от 50000</option>
+    <option value="10000">от 100000</option>
+  </select>
+<!-- </form>
+<form class="filters-320__select"> -->
+    <select name="discount" id="discount-select"  class="filters-320__select choices">
+      <option value="">Скидка</option>
+      <option value=">5000">Более 5000</option>
+      <option value="<5000">Менее 5000</option>
+      <option value="no matter">Не важно</option>
+    </select>
+<!-- </form>
+<form class="filters-320__select"> -->
+  <select name="color" id="color-select"  class="filters-320__select choices">
+    <option value="">Цвет</option>
+    <option value="2000">Коричневый</option>
+    <option value="10000">Черный</option>
+    <option value="50000">Бежевый</option>
+    <option value="10000">Серый</option>
+    <option value="10000">Белый</option>
+    <option value="10000">Синий</option>
+    <option value="10000">Оранжевый</option>
+    <option value="10000">Желтый</option>
+    <option value="10000">Зеленый</option>
+  </select>
+</form>
+
+        </div>
         <ul class="catalog-hero__list list-reset">
-          <li class="card tabs__content tabs__content--active" data-tabs-target="first">
+          <li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -408,7 +457,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first"">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -434,7 +483,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -460,7 +509,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -486,7 +535,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -512,7 +561,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active tabs__content--active-mobile" data-tabs="first" data-tabs-mobile="first">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -538,7 +587,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active" data-tabs="first" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -564,7 +613,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active" data-tabs="first" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -590,7 +639,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content tabs__content--active" data-tabs-target="first">
+<li class="card tabs__content tabs__content--active" data-tabs="first" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -616,7 +665,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -642,7 +691,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -668,7 +717,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="second">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -694,7 +743,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -720,7 +769,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -746,7 +795,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -772,7 +821,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -798,7 +847,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -824,7 +873,7 @@
     </div>
   </article>
 </li>
-<li class="card tabs__content" data-tabs-target="second">
+<li class="card tabs__content" data-tabs="second" data-tabs-mobile="third">
   <article class="card__content">
     <span class="card__sticker card__sticker--rating">
       <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
@@ -853,8 +902,9 @@
 
         </ul>
         <div class="catalog-hero__btn tabs__wrapper">
-          <button class="tabs__btn tabs__btn--active" aria-label="Первая страница каталога" data-tabs-path="first">1</button>
-          <button class="tabs__btn" aria-label="Вторая страница каталога" data-tabs-path="second">2</button>
+          <button class="tabs__btn tabs__btn--active" aria-label="Первая страница каталога" data-tabs-path="first" data-tabs-path-mobile="first">1</button>
+          <button class="tabs__btn" aria-label="Вторая страница каталога" data-tabs-path="second" data-tabs-path-mobile="second">2</button>
+          <button class="tabs__btn is-hidden" aria-label="Третья страница каталога" data-tabs-path="third" data-tabs-path-mobile="third">3</button>
         </div>
       </div>
     </div>

@@ -4,6 +4,14 @@
     &--active {
       display: block;
     }
+    @media (max-width: 1008px) {
+      &--active {
+        display: none;
+      }
+      &--active-mobile {
+        display: block;
+      }
+    }
   }
   &__btn {
     width: 32px;
@@ -24,6 +32,9 @@
     }
     &:not(:last-child) {
       margin-right: 10px;
+      @media (max-width: 765px) {
+        margin-right: 12px;
+      }
     }
     &:hover {
       background: $primary;

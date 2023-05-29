@@ -17,6 +17,9 @@
     width: min(100%, 20.25rem);
     margin-right: 0.25rem;
     color: $grey;
+    @media (max-width: 1840px) {
+      width: min(100%, 11.5rem);
+    }
     &::after {
       content: "............................................................";
       position: absolute;

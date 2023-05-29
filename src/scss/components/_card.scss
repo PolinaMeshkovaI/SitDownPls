@@ -75,6 +75,7 @@
         align-items: end;
         padding-left: 13px;
         padding-right: 13px;
+        margin-bottom: 17px;
        }
        @media (max-width: 1008px) {
         min-height: 190px;
@@ -97,7 +98,7 @@
     align-items: flex-start;
     justify-content: space-between;
     &--rating {
-      padding-bottom: 20px;
+      padding-bottom: 28px;
       @media (max-width: 1008px) {
         padding-bottom: 31px;
       }
@@ -127,6 +128,9 @@
       @media (max-width: 450px) {
         margin-bottom: 12px;
       }
+    }
+    &--product-similar {
+      margin-bottom: 21px;
     }
   }
   &__subtitle {

@@ -28,18 +28,20 @@
       </li>
     </ol>
     <div class="product-section__wrapper">
-      <div class="product-section__picture product-picture">
-        <div class="product-picture__top">
+      <div class="product-section__top">
+        <div class="product-section__picture-large">
           <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
             <picture>
+              <source srcset="../img/D-31-maxi-1024.webp" type="image/webp" media="(max-width: 1070px)">
               <source srcset="../img/D-31-maxi.webp" type="image/webp">
               <img loading="lazy" src="../img/D-31-maxi.png" class="product-picture__img" width="624" height="245" alt="диван d-31">
             </picture>
           </button>
         </div>
-        <div class="product-picture__bottom">
+        <div class="product-section__picture-mini">
           <button class="product-picture__modal-btn btn-reset" aria-label="Открыть увеличенное изображение">
             <picture>
+              <!-- <source srcset="../img/D-31-maxi-1-1024.webp" type="image/webp" media="(max-width: 1070px)"> -->
               <source srcset="../img/D-31-maxi-1.webp" type="image/webp">
               <img loading="lazy" src="../img/D-31-maxi-1.png" class="product-picture__item" width="123" height="61" alt="диван d-31">
             </picture>
@@ -63,53 +65,57 @@
             </picture>
           </button>
         </div>
-      </div>
-      <div class="product-section__info">
-        <span class="product-section__rating">
-          <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
-          4,8
-        </span>
-        <h1 class="product-section__title subtitle">
-          Диван тканевый прямой &laquo;D-31&raquo;
-        </h1>
-        <p class="product-section__descr">
-          Мини 120&nbsp;см без ящика Stark синий (Рогожка)
-        </p>
-        <span class="product-section__price">
-          28&nbsp;490 руб
-        </span>
-        <button class="product-section__btn btn btn--primary" id="buy-in-one-click-btn">
-          Купить в&nbsp;один клик
-        </button>
-        <a href="#" class="product-section__link">
-          + Добавить в&nbsp;корзину
-        </a>
-      </div>
-      <div class="product-section__mechanics mechanics">
-        <div class="mechanics__wrapper">
-          <h2 class="mechanics__title">
-            Опорный механизм
-          </h2>
-          <p class="mechanics__descr descr">
-            Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.
+        <div class="product-section__info">
+          <span class="product-section__rating">
+            <img class="card__star" src="../img/star.svg" alt="Звезда рейтинга">
+            4,8
+          </span>
+          <h1 class="product-section__title subtitle">
+            Диван тканевый прямой &laquo;D-31&raquo;
+          </h1>
+          <p class="product-section__descr">
+            Мини 120&nbsp;см без ящика Stark синий (Рогожка)
           </p>
-          <p class="mechanics__descr descr">
-            Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
-          </p>
-        </div>
-        <div class="mechanics__images">
-          <picture class="mechanics__img">
-            <source srcset="../img/mechanism-1.webp" type="image/webp">
-            <img loading="lazy" src="../img/mechanism-1.png" width="247" height="113" alt="опорный механизм">
-          </picture>
-          <picture class="mechanics__img">
-            <source srcset="../img/mechanism-2.webp" type="image/webp">
-            <img loading="lazy" src="../img/mechanism-2.png" width="247" height="113" alt="опорный механизм">
-          </picture>
+          <span class="product-section__price">
+            28&nbsp;490 руб
+          </span>
+          <button class="product-section__btn btn btn--primary" id="buy-in-one-click-btn">
+            Купить в&nbsp;один клик
+          </button>
+          <a href="#" class="product-section__link">
+            + Добавить в&nbsp;корзину
+          </a>
         </div>
       </div>
-      <div class="product-section__detail detail">
-        @include('details.html')
+      <div class="product-section__bottom">
+        <div class="product-section__mechanics mechanics">
+          <div class="mechanics__wrapper">
+            <h2 class="mechanics__title">
+              Опорный механизм
+            </h2>
+            <p class="mechanics__descr descr">
+              Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.
+            </p>
+            <p class="mechanics__descr descr">
+              Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
+            </p>
+          </div>
+          <div class="mechanics__images">
+            <picture class="mechanics__img">
+              <source srcset="../img/mechanism-1-1024.webp" type="image/webp" media="(max-width: 1070px)">
+              <source srcset="../img/mechanism-1.webp" type="image/webp">
+              <img loading="lazy" src="../img/mechanism-1.png" width="247" height="113" alt="первое изображение опорного механизма дивана D-31">
+            </picture>
+            <picture class="mechanics__img">
+              <source srcset="../img/mechanism-2-1024.webp" type="image/webp" media="(max-width: 1070px)">
+              <source srcset="../img/mechanism-2.webp" type="image/webp">
+              <img loading="lazy" src="../img/mechanism-2.png" width="247" height="113" alt="второе изображение опорного механизма дивана D-31">
+            </picture>
+          </div>
+        </div>
+        <div class="product-section__detail detail">
+          @include('details.html')
+        </div>
       </div>
     </div>
   </div>

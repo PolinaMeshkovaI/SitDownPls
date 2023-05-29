@@ -1,6 +1,10 @@
-import { castomChoicesCity, castomChoicesProduct } from "./components/castom-choices";
+import { castomChoicesCity, castomChoicesProduct, castomChoicesCategory, castomChoicesPrice, castomChoicesDiscount, castomChoicesColor } from "./components/castom-choices";
 castomChoicesCity();
 castomChoicesProduct();
+castomChoicesCategory();
+castomChoicesPrice();
+castomChoicesDiscount();
+castomChoicesColor();
 
 import { swiper } from "./components/swiper";
 swiper();

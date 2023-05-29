@@ -3205,6 +3205,10 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
+(0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCategory)();
+(0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesPrice)();
+(0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesDiscount)();
+(0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesColor)();
 
 (0,_components_swiper__WEBPACK_IMPORTED_MODULE_1__.swiper)();
 
@@ -3286,7 +3290,11 @@ const burger = () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "castomChoicesCategory": () => (/* binding */ castomChoicesCategory),
 /* harmony export */   "castomChoicesCity": () => (/* binding */ castomChoicesCity),
+/* harmony export */   "castomChoicesColor": () => (/* binding */ castomChoicesColor),
+/* harmony export */   "castomChoicesDiscount": () => (/* binding */ castomChoicesDiscount),
+/* harmony export */   "castomChoicesPrice": () => (/* binding */ castomChoicesPrice),
 /* harmony export */   "castomChoicesProduct": () => (/* binding */ castomChoicesProduct)
 /* harmony export */ });
 /* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
@@ -3294,10 +3302,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const castomChoicesCity = () => {
   const element = document.querySelector("#city-select");
-  const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
-    searchEnabled: false,
-    itemSelectText: ""
-  });
+  if (element) {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
+      searchEnabled: false,
+      itemSelectText: ""
+    });
+  }
 };
 const castomChoicesProduct = () => {
   const element = document.querySelector("#product-select");
@@ -3305,6 +3315,42 @@ const castomChoicesProduct = () => {
     searchEnabled: false,
     itemSelectText: ""
   });
+};
+const castomChoicesCategory = () => {
+  const element = document.querySelector("#category-select");
+  if (element) {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
+      searchEnabled: false,
+      itemSelectText: ""
+    });
+  }
+};
+const castomChoicesPrice = () => {
+  const element = document.querySelector("#price-select");
+  if (element) {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
+      searchEnabled: false,
+      itemSelectText: ""
+    });
+  }
+};
+const castomChoicesDiscount = () => {
+  const element = document.querySelector("#discount-select");
+  if (element) {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
+      searchEnabled: false,
+      itemSelectText: ""
+    });
+  }
+};
+const castomChoicesColor = () => {
+  const element = document.querySelector("#color-select");
+  if (element) {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(element, {
+      searchEnabled: false,
+      itemSelectText: ""
+    });
+  }
 };
 
 /***/ }),
@@ -3579,25 +3625,57 @@ const tabsBtn = () => {
     const tabsBtn = document.querySelectorAll('.tabs__btn');
     const tabsContent = document.querySelectorAll('.tabs__content');
     if (tabs) {
-      tabs.addEventListener('click', e => {
-        if (e.target.classList.contains('tabs__btn')) {
-          const tabsPath = e.target.dataset.tabsPath;
-          let tabsItem = document.querySelectorAll(`[data-tabs-target="${tabsPath}"]`);
-          let tabsBtnActive = document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`);
-          tabsContent.forEach(el => {
-            el.classList.remove('tabs__content--active');
-          });
-          tabsItem.forEach(el => {
-            el.classList.add('tabs__content--active');
-          });
-          tabsBtn.forEach(el => {
-            el.classList.remove('tabs__btn--active');
-          });
-          tabsBtnActive.forEach(el => {
-            el.classList.add('tabs__btn--active');
-          });
-        }
-      });
+      function createTabsDesktop() {
+        tabs.addEventListener('click', e => {
+          if (e.target.classList.contains('tabs__btn')) {
+            const tabsPath = e.target.dataset.tabsPath;
+            let tabsItem = document.querySelectorAll(`[data-tabs="${tabsPath}"]`);
+            let tabsBtnActive = document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`);
+            tabsContent.forEach(el => {
+              el.classList.remove('tabs__content--active');
+            });
+            tabsItem.forEach(el => {
+              el.classList.add('tabs__content--active');
+            });
+            tabsBtn.forEach(el => {
+              el.classList.remove('tabs__btn--active');
+            });
+            tabsBtnActive.forEach(el => {
+              el.classList.add('tabs__btn--active');
+            });
+          }
+        });
+      }
+      function createTabsTablet() {
+        tabsBtn.forEach(el => {
+          el.classList.remove('is-hidden');
+        });
+        tabs.addEventListener('click', e => {
+          if (e.target.classList.contains('tabs__btn')) {
+            const tabsPath = e.target.dataset.tabsPath;
+            let tabsItem = document.querySelectorAll(`[data-tabs-mobile="${tabsPath}"]`);
+            let tabsBtnActive = document.querySelectorAll(`[data-tabs-path-mobile="${tabsPath}"]`);
+            tabsContent.forEach(el => {
+              el.classList.remove('tabs__content--active-mobile');
+            });
+            tabsItem.forEach(el => {
+              el.classList.add('tabs__content--active-mobile');
+            });
+            tabsBtn.forEach(el => {
+              el.classList.remove('tabs__btn--active');
+            });
+            tabsBtnActive.forEach(el => {
+              el.classList.add('tabs__btn--active');
+            });
+          }
+        });
+      }
+      const screenWidth = window.screen.width;
+      if (screenWidth > 1008) {
+        createTabsDesktop();
+      } else {
+        createTabsTablet();
+      }
     }
   });
 };
