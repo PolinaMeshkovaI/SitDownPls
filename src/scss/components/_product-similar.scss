@@ -1,5 +1,5 @@
 .product-similar {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   &__top {
     display: flex;
     margin-bottom: 20px;
@@ -13,5 +13,9 @@
     & .swiper-button-prev {
       top: 8px;
     }
+  }
+  &__swiper {
+    width: 100%;
+    overflow: hidden;
   }
 }

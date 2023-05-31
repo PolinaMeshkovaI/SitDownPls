@@ -2,7 +2,7 @@ import JustValidate from 'just-validate';
 
 export const validation = () => {
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document?.querySelector('.form');
+    const form = document.querySelector('.form');
     if (form) {
       const validation = new JustValidate('.form', {
         errorLabelStyle: {

@@ -12,9 +12,6 @@ swiper();
 import { showMore } from "./components/show-more";
 showMore();
 
-import { validation } from "./components/validation";
-validation();
-
 import { tooltip } from "./components/tooltip";
 tooltip();
 
@@ -32,3 +29,9 @@ modalOneClick();
 
 import { modalSuccessForm } from "./components/modal-success-form";
 modalSuccessForm();
+
+import { modalScaleClick } from "./components/modal-scale";
+modalScaleClick();
+
+import { validation } from "./components/validation";
+validation();
