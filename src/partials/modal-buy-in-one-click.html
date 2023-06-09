@@ -1,7 +1,7 @@
 <section class="modal"  id="modal-one-click">
   <div class="container modal__container">
     <div class="modal__box">
-      <button class="modal__close btn-reset">
+      <button class="modal__close btn-reset" aria-label="Кнопка Закрыть модальное окно">
         <svg class="modal__img" id="modal-one-click-close">
           <use xlink:href="img/sprite.svg#exit"></use>
         </svg>
@@ -14,18 +14,18 @@
       </p>
       <form action="#" class="modal__form form" id="modal-success-form">
         <div class="form__wrapper">
-            <input type="text" class="form__input modal-success-input" name="name" placeholder="Как вас зовут?" id="name" required>
+            <input type="text" class="form__input modal__input" name="name" placeholder="Как вас зовут?" id="name" aria-label="Поле ввода имени" required>
         </div>
         <div class="form__wrapper">
-          <input type="tel" class="form__input modal-success-input" name="tel" placeholder="Ваш телефон" id="tel" required>
+          <input type="tel" class="form__input modal__input" name="tel" placeholder="Ваш телефон" id="tel" aria-label="Поле ввода телефона" required>
         </div>
         <div class="form__bottom">
-          <button type="submit" class="btn btn--primary form__btn btn-reset">Отправить</button>
+          <button type="submit" class="btn btn--primary form__btn btn-reset" aria-label="Кнопка Отправить">Отправить</button>
           <label for="checkbox" class="form__check">
-            <input class="form__checkbox visually-hidden modal-success-input" type="checkbox" id="checkbox" required>
-            <span class="form__descr">
+            <input class="form__checkbox visually-hidden modal__input" type="checkbox" id="checkbox" aria-label="Кнопка Согласиться с пользовательским соглашением" required>
+            <span class="form__descr modal__form-descr">
               Принимаю
-              <a href="#" class="form__link">пользовательское соглашение</a>
+              <a href="#" class="form__link" target="_blank" aria-label="Ссылка на пользовательское соглашение">пользовательское соглашение</a>
             </span>
           </label>
         </div>

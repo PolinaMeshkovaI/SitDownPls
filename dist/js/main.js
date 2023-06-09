@@ -3431,7 +3431,7 @@ const modalSuccessForm = () => {
   if (modalClick) {
     function successValidation(form) {
       let result = true;
-      const allModalInputs = document.querySelectorAll(".modal-success-input");
+      const allModalInputs = document.querySelectorAll(".modal__input");
       for (let input of allModalInputs) {
         if (input.value == "") {
           result = false;
@@ -3568,7 +3568,8 @@ const swiper = () => {
       },
       pagination: {
         el: '.swiper-pagination',
-        type: 'bullets'
+        type: 'bullets',
+        clickable: true
       },
       loop: true,
       disableOnInteraction: false,
@@ -3587,8 +3588,8 @@ const swiper = () => {
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
       },
       breakpoints: {
         320: {
@@ -3609,8 +3610,8 @@ const swiper = () => {
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
       },
       breakpoints: {
         576: {
@@ -3632,47 +3633,6 @@ const swiper = () => {
       }
     });
   }
-  const productSimilarSection = document.querySelector('.product-similar');
-  if (productSimilarSection) {
-    const swiperProductSimilar = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-product-similar', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      a11y: {
-        prevSlideMessage: 'Предыдущий слайд',
-        nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
-      }
-    });
-  }
-  const modalScale = document.querySelector('.modal--scale');
-  if (modalScale) {
-    const swiperModal = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-slider', {
-      slidesPerView: 1,
-      watchSlidesProgress: true,
-      thumbs: {
-        swiper: {
-          el: ".modal-slider-nav",
-          slidesPerView: 4
-        }
-      },
-      a11y: {
-        prevSlideMessage: 'Предыдущий слайд',
-        nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
-      }
-    });
-    const swiperModalNav = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-slider-nav', {
-      slidesPerView: 4,
-      spaceBetween: 70,
-      centerInsufficientSlides: true
-    });
-  }
   const productSection = document.querySelector('.product-section');
   if (productSection) {
     const swiperBasic = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-large-images', {
@@ -3686,39 +3646,116 @@ const swiper = () => {
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
       }
     });
     const swiperNav = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-small-images', {
-      slidesPerView: 4,
+      slidesPerView: 2.6,
       spaceBetween: 38,
+      direction: 'horizontal',
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
-        firstSlideMessage: 'Это первый слайд',
-        lastSlideMessage: 'Это последний слайд'
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
+      },
+      breakpoints: {
+        1200: {
+          direction: 'horizontal',
+          slidesPerView: 4,
+          spaceBetween: 38
+        },
+        1009: {
+          direction: 'horizontal',
+          slidesPerView: 3.6,
+          spaceBetween: 38
+        },
+        766: {
+          direction: 'vertical',
+          slidesPerView: 4,
+          spaceBetween: 18
+        }
       }
-
-      // breakpoints: {
-      //   1071: {
-      //     direction: 'horizontal',
-      //     slidesPerView: 4,
-      //     spaceBetween: 38,
-      //   },
-
-      //   993: {
-      //     direction: 'horizontal',
-      //     slidesPerView: 3.6,
-      //     spaceBetween: 38,
-      //   },
-
-      //   577: {
-      //     direction: 'vertical',
-      //     slidesPerView: 4,
-      //     spaceBetween: 18,
-      //   },
-      // },
+    });
+  }
+  const productSimilarSection = document.querySelector('.product-similar');
+  if (productSimilarSection) {
+    const swiperProductSimilar = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-product-similar', {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд',
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
+      },
+      breakpoints: {
+        1071: {
+          slidesPerView: 4,
+          spaceBetween: 38
+        },
+        993: {
+          slidesPerView: 3,
+          spaceBetween: 38
+        },
+        577: {
+          slidesPerView: 2,
+          spaceBetween: 32
+        }
+      }
+    });
+  }
+  const modalScale = document.querySelector('.modal--scale');
+  if (modalScale) {
+    const swiperModal = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-slider', {
+      slidesPerView: 'auto',
+      freeMode: true,
+      watchSlidesProgress: true,
+      thumbs: {
+        swiper: {
+          el: ".modal-slider-nav",
+          slidesPerView: 4
+        }
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд',
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
+      }
+    });
+    const swiperModalNav = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-slider-nav', {
+      slidesPerView: 1,
+      spaceBetween: 70,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд',
+        firstSlideMessage: 'Первый слайд',
+        lastSlideMessage: 'Последний слайд'
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 38
+        },
+        1009: {
+          slidesPerView: 3,
+          spaceBetween: 38
+        },
+        766: {
+          slidesPerView: 2,
+          spaceBetween: 32
+        }
+      }
     });
   }
 };

@@ -1,10 +1,21 @@
 .product-similar {
   margin-bottom: 65px;
+  @media (max-width: 765px) {
+    margin-bottom: 74px;
+  }
   &__top {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 1840px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    @media (max-width: 765px) {
+      font-size: 24px;
+    }
   }
   &__btn {
     display: flex;
@@ -12,6 +23,19 @@
     & .swiper-button-next,
     & .swiper-button-prev {
       top: 8px;
+    }
+    &--1920 {
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+    &--320 {
+      display: none;
+      margin-top: 35px;
+      justify-content: center;
+      @media (max-width: 765px) {
+        display: flex;
+      }
     }
   }
   &__swiper {

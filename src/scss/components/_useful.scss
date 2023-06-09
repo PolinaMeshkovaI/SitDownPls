@@ -3,104 +3,6 @@
   width: 100%;
   overflow: hidden;
 }
-.swiper2-button-prev {
-  margin-right: 13px;
-}
-
-.swiper2-button-prev,
-.swiper2-button-next {
-	position: static;
-}
-.swiper2-button-prev::after,
-.swiper2-button-next::after {
-  display: none;
-}
-.swiper2-button-next,
-.swiper2-button-prev {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border: 2px solid $primary;
-  border-radius: 50%;
-  background: none;
-  z-index: 5;
-  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
-}
-.swiper2-button-next:focus,
-.swiper2-button-prev:focus {
-  background: $primary_light;
-}
-.swiper2-button-next:hover,
-.swiper2-button-prev:hover {
-  background: $primary;
-}
-.swiper2-button-next:active,
-.swiper2-button-prev:active {
-  background: $primary_shade;
-}
-.swiper2-button-prev.swiper-button-disabled,
-.swiper2-button-next.swiper-button-disabled {
-  opacity: 1;
-  border-color: $grey;
-}
-.swiper2-button-prev.swiper-button-disabled::before,
-.swiper2-button-next.swiper-button-disabled::before {
-  opacity: 1;
-  border-color: $grey;
-}
-.swiper2-button-next::before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 35%;
-  bottom: 50%;
-  right: 50%;
-  left: 33%;
-  border-bottom: 2px solid $primary;
-  border-right: 2px solid $primary;
-  transform: rotate(-45deg);
-  z-index: 5;
-  transition: border-color 0.3s ease-in-out;
-}
-.swiper2-button-prev::before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 35%;
-  bottom: 50%;
-  right: 50%;
-  left: 39%;
-  border-top: 2px solid $primary;
-  border-left: 2px solid $primary;
-  transform: rotate(-45deg);
-  z-index: 5;
-  transition: border-color 0.3s ease-in-out;
-}
-.swiper2-button-prev:focus::before,
-.swiper2-button-next:focus::before {
-  border-color: $light-color
-}
-.swiper2-button-prev:hover::before,
-.swiper2-button-next:hover::before {
-  border-color: $light-color
-}
-.swiper2-button-prev:active::before,
-.swiper2-button-next:active::before {
-  border-color: $light-color
-}
-.swiper-wrapper {
-  height: auto;
-  box-sizing: border-box;
-}
-.swiper-slide {
-  height: auto;
-}
 
 .useful {
   padding-bottom: 64px;
@@ -169,48 +71,48 @@
       padding-top: 233px;
     }
     &--img1 {
-      background-image: url(../../img/useful_slide1.jpg);
+      background-image: url(../../img/useful_slide1.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/useful_slide1_1024.png);
+        background-image: url(../../img/useful_slide1_1024.webp);
       }
       @media (max-width: 765px) {
-        background-image: url(../../img/useful_slide1_320.png);
+        background-image: url(../../img/useful_slide1_320.webp);
       }
     }
     &--img2 {
-      background-image: url(../../img/useful_slide2.jpg);
+      background-image: url(../../img/useful_slide2.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/useful_slide2_1024.png);
+        background-image: url(../../img/useful_slide2_1024.webp);
       }
       @media (max-width: 765px) {
-        background-image: url(../../img/useful_slide2_320.png);
+        background-image: url(../../img/useful_slide2_320.webp);
       }
     }
     &--img3 {
-      background-image: url(../../img/useful_slide3.jpg);
+      background-image: url(../../img/useful_slide3.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/useful_slide3_1024.png);
+        background-image: url(../../img/useful_slide3_1024.webp);
       }
       @media (max-width: 765px) {
-        background-image: url(../../img/useful_slide3_320.png);
+        background-image: url(../../img/useful_slide3_320.webp);
       }
     }
     &--img4 {
-      background-image: url(../../img/useful_slide4.jpg);
+      background-image: url(../../img/useful_slide4.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/useful_slide4_1024.png);
+        background-image: url(../../img/useful_slide4_1024.webp);
       }
       @media (max-width: 765px) {
-        background-image: url(../../img/useful_slide4_320.png);
+        background-image: url(../../img/useful_slide4_320.webp);
       }
     }
     &--img5 {
-      background-image: url(../../img/useful_slide5.jpg);
+      background-image: url(../../img/useful_slide5.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/useful_slide5_1024.png);
+        background-image: url(../../img/useful_slide5_1024.webp);
       }
       @media (max-width: 765px) {
-        background-image: url(../../img/useful_slide5_320.png);
+        background-image: url(../../img/useful_slide5_320.webp);
       }
     }
   }

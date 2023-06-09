@@ -157,71 +157,71 @@
     }
     &--1 {
       min-height: 308px;
-      background-image: url(../../img/categories_sofa.png);
+      background-image: url(../../img/categories_sofa.webp);
       @media (max-width: 1008px) {
         bottom: 81px;
       }
       @media (max-width: 765px) {
         min-height: 212px;
         bottom: 13px;
-        background-image: url(../../img/categories_sofa_320.png);
+        background-image: url(../../img/categories_sofa_320.webp);
       }
     }
     &--2 {
       min-height: 306px;
-      background-image: url(../../img/categories_armchair.png);
+      background-image: url(../../img/categories_armchair.webp);
       @media (max-width: 1840px) {
-        background-image: url(../../img/categories_armchair_1024.png);
+        background-image: url(../../img/categories_armchair_1024.webp);
       }
       @media (max-width: 1840px) {
         min-height: 296px;
       }
       @media (max-width: 765px) {
         min-height: 104px;
-        background-image: url(../../img/categories_armchair_320.png);
+        background-image: url(../../img/categories_armchair_320.webp);
       }
     }
     &--3 {
       max-width: 306px;
       min-height: 202px;
       background-size: contain;
-      background-image: url(../../img/categories_bed.png);
+      background-image: url(../../img/categories_bed.webp);
       @media (max-width: 1840px) {
         min-height: 296px;
-        background-image: url(../../img/categories_bed_1024.png);
+        background-image: url(../../img/categories_bed_1024.webp);
       }
       @media (max-width: 765px) {
         min-height: 104px;
-        background-image: url(../../img/categories_bed_320.png);
+        background-image: url(../../img/categories_bed_320.webp);
       }
     }
     &--4 {
       max-width: 330px;
       min-height: 202px;
-      background-image: url(../../img/categories_dresser.png);
+      background-image: url(../../img/categories_dresser.webp);
       @media (max-width: 1840px) {
         min-height: 296px;
-        background-image: url(../../img/categories_dresser_1024.png);
+        background-image: url(../../img/categories_dresser_1024.webp);
       }
       @media (max-width: 765px) {
         min-height: 104px;
-        background-image: url(../../img/categories_dresser_320.png);
+        background-image: url(../../img/categories_dresser_320.webp);
       }
     }
     &--5 {
       max-width: 256px;
       min-height: 202px;
-      background-image: url(../../img/categories_chair.png);
+      background-image: url(../../img/categories_chair.webp);
       @media (max-width: 1840px) {
         min-height: 296px;
-        background-image: url(../../img/categories_chair_1024.png);
+        background-image: url(../../img/categories_chair_1024.webp);
       }
       @media (max-width: 1840px) {
         max-width: 264px;
       }
       @media (max-width: 765px) {
         min-height: 104px;
-        background-image: url(../../img/categories_chair_320.png);
+        background-image: url(../../img/categories_chair_320.webp);
       }
     }
   }

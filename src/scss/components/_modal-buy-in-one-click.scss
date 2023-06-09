@@ -20,21 +20,38 @@
   &__box {
     position: relative;
     display: flex;
-    flex-direction: column;
-    max-width: 624px;
-    min-height: 421px;
+    margin-top: 181px;
     padding: 30px;
+    max-width: 624px;
+    // max-height: 421px;
+    flex-direction: column;
     z-index: 1;
-    margin: 181px auto 0 auto;
     background-color: $light-color;
     border-radius: 10px;
+    @media (max-width: 765px) {
+      margin-top: 460px;
+      padding: 32px 14px;
+    }
     &--success {
+      padding: 118px 75px;
       justify-content: center;
+      @media (max-width: 765px) {
+        padding: 60px 51px;
+      }
     }
     &--scale {
       padding: 0;
       max-width: 1280px;
-      min-height: 684px;
+      max-height: 750px;
+      height: 80vh;
+      overflow: auto;
+      @media (max-width: 1840px) {
+        max-width: 952px;
+        min-height: 588px;
+      }
+      @media (max-width: 765px) {
+        min-height: 286px;
+      }
     }
   }
   &__close {
@@ -43,6 +60,10 @@
     right: 20px;
     cursor: pointer;
     z-index: 10;
+    @media (max-width: 765px) {
+      top: 16px;
+      right: 16px;
+    }
     &:hover .modal__img{
       fill: $primary;
     }
@@ -59,6 +80,10 @@
     width: 20px;
     height: 20px;
     fill: $grey;
+    @media (max-width: 765px) {
+      width: 12px;
+      height: 12px;
+    }
   }
   &__pic {
     position: relative;
@@ -66,10 +91,21 @@
     margin-bottom: 32px;
     width: 172px;
     height: 117px;
-    transform: translateX(-22px);
+    @media (max-width: 765px) {
+      margin-bottom: 14px;
+      width: 73px;
+      height: 50px;
+      transform: 0;
+    }
   }
   &__title {
     margin-bottom: 8px;
+    &--success{
+      @media (max-width: 765px) {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
   }
   &__descr {
     margin: 0;
@@ -78,12 +114,35 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    @media (max-width: 765px) {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  &__input {
+    @media (max-width: 765px) {
+      margin-bottom: 16px;
+    }
+  }
+  &__form-descr {
+    @media (max-width: 765px) {
+      padding-left: 18px;
+    }
   }
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    &--scale {
+      @media (max-width: 1008px) {
+        max-width: 624px;
+        // width: 80%;
+      }
+      @media (max-width: 765px) {
+        max-width: 286px;
+      }
+    }
   }
 }
 

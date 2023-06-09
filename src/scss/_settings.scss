@@ -34,7 +34,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .is-hidden {
@@ -175,6 +175,7 @@ a {
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
+  color: $primary;
   border: 2px solid $primary;
   border-radius: 10px;
   cursor: pointer;
@@ -250,4 +251,128 @@ a {
     z-index: 5;
     transition: border-color 0.3s ease-in-out;
   }
+}
+
+.swiper-button-prev,
+.swiper2-button-prev {
+  margin-right: 13px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper2-button-prev::after,
+.swiper2-button-next::after {
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev,
+.swiper2-button-next,
+.swiper2-button-prev  {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  background: none;
+  z-index: 5;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus,
+.swiper2-button-next:focus,
+.swiper2-button-prev:focus {
+  background: $primary_light;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper2-button-next:hover,
+.swiper2-button-prev:hover {
+  background: $primary;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active,
+.swiper2-button-next:active,
+.swiper2-button-prev:active {
+  background: $primary_shade;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled,
+.swiper2-button-prev.swiper-button-disabled,
+.swiper2-button-next.swiper-button-disabled {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper-button-prev.swiper-button-disabled::before,
+.swiper-button-next.swiper-button-disabled::before,
+.swiper2-button-prev.swiper-button-disabled::before,
+.swiper2-button-next.swiper-button-disabled::before {
+  opacity: 1;
+  border-color: $grey;
+}
+.swiper-button-next::before,
+.swiper2-button-next::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 33%;
+  border-bottom: 2px solid $primary;
+  border-right: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper-button-prev::before,
+.swiper2-button-prev::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  bottom: 50%;
+  right: 50%;
+  left: 39%;
+  border-top: 2px solid $primary;
+  border-left: 2px solid $primary;
+  transform: rotate(-45deg);
+  z-index: 5;
+  transition: border-color 0.3s ease-in-out;
+}
+.swiper-button-prev:focus::before,
+.swiper-button-next:focus::before,
+.swiper2-button-prev:focus::before,
+.swiper2-button-next:focus::before {
+  border-color: $light-color
+}
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before,
+.swiper2-button-prev:hover::before,
+.swiper2-button-next:hover::before {
+  border-color: $light-color
+}
+.swiper-button-prev:active::before,
+.swiper-button-next:active::before,
+.swiper2-button-prev:active::before,
+.swiper2-button-next:active::before {
+  border-color: $light-color
+}
+
+.swiper-wrapper {
+  box-sizing: border-box;
+  height: auto;
+}
+.swiper-slide {
+  height: auto;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
 }

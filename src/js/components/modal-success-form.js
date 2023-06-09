@@ -7,7 +7,7 @@ export const modalSuccessForm = () => {
   if(modalClick) {
     function successValidation (form) {
       let result = true;
-      const allModalInputs = document.querySelectorAll(".modal-success-input");
+      const allModalInputs = document.querySelectorAll(".modal__input");
 
       for (let input of allModalInputs) {
         if (input.value == "") {

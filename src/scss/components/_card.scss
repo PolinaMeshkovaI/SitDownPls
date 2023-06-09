@@ -1,16 +1,4 @@
 .card {
-  // &--rating{
-  //   display: grid;
-  //   grid-template-columns: repeat(4, 1fr);
-  //   gap: 32px;
-  //   margin-bottom: 34px;
-  // }
-  // &--catalog {
-  //   display: grid;
-  //   grid-template-columns: repeat(3, 1fr);
-  //   grid-column: 3 span;
-  //   gap: 32px;
-  // }
   &__content{
     position: relative;
     display: flex;
@@ -18,7 +6,6 @@
     height: 100%;
     background: $grey_light;
     border-radius: 10px;
-
   }
   &__sticker {
     position: absolute;
@@ -88,6 +75,12 @@
         padding-right: 14px;
       }
     }
+    &--similar {
+      @media (max-width: 765px) {
+        min-height: 100px;
+        margin-bottom: 8px;
+      }
+    }
   }
   &__bottom {
     display: flex;
@@ -131,6 +124,9 @@
     }
     &--product-similar {
       margin-bottom: 21px;
+      @media (max-width: 765px) {
+        margin-bottom: 10px;
+      }
     }
   }
   &__subtitle {
