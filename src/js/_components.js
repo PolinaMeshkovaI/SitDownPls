@@ -33,5 +33,9 @@ modalSuccessForm();
 import { modalScaleClick } from "./components/modal-scale";
 modalScaleClick();
 
+import { catalogDropdown } from "./components/catlog-dropdown";
+catalogDropdown();
+
 import { validation } from "./components/validation";
 validation();
+

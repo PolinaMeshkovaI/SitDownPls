@@ -99,7 +99,7 @@
     <div class="header__center center">
       <nav class="header__nav nav header__nav--768">
         <button class="nav__close btn-reset">
-          <svg aria-label="Кнопка закрытия меню" class="nav__close nav__close--img" width="24" height="24">
+          <svg aria-label="Кнопка закрытия меню" class="nav__img-close" width="24" height="24">
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
         </button>
@@ -385,45 +385,199 @@
         </h2>
         <div class="catalog-hero__filters-320 filters-320">
           <span class="filters-320__label">Фильтры:</span>
-          <form class="filters-320__form">
-  <select name="category" id="category-select"  class="filters-320__select choices" aria-label="Фильтр по категории товаров">
-    <option value="">Категория</option>
-    <option value="sofas">Диваны</option>
-    <option value="armchairs">Кресла</option>
-    <option value="puffs">Пуфы</option>
-    <option value="beds">Кровати</option>
-    <option value="cabinets">Тумбы</option>
-    <option value="dressers">Комоды</option>
-    <option value="chairs">Стулья</option>
-    <option value="tables">Столы</option>
-    <option value="accessories">Аксессуары</option>
-  </select>
-  <select name="price" id="price-select"  class="filters-320__select choices" aria-label="Фильтр по цене товаров">
-    <option value="">Цена</option>
-    <option value="2000">от 2000</option>
-    <option value="10000">от 10000</option>
-    <option value="50000">от 50000</option>
-    <option value="10000">от 100000</option>
-  </select>
-    <select name="discount" id="discount-select"  class="filters-320__select choices" aria-label="Фильтр по скидке на товар">
-      <option value="">Скидка</option>
-      <option value=">5000">Более 5000</option>
-      <option value="<5000">Менее 5000</option>
-      <option value="no matter">Не важно</option>
-    </select>
-  <select name="color" id="color-select"  class="filters-320__select choices" aria-label="Фильтр по цвету товаров">
-    <option value="">Цвет</option>
-    <option value="2000">Коричневый</option>
-    <option value="10000">Черный</option>
-    <option value="50000">Бежевый</option>
-    <option value="10000">Серый</option>
-    <option value="10000">Белый</option>
-    <option value="10000">Синий</option>
-    <option value="10000">Оранжевый</option>
-    <option value="10000">Желтый</option>
-    <option value="10000">Зеленый</option>
-  </select>
-</form>
+          <ul class="filters-320__list list-reset">
+  <li class="filters-320__item">
+    <div class="filters-320__select catalog-select">
+      <button class="catalog-select__header btn-reset" type="button" aria-label="Кнопка фильтровать по категории">
+        Категория
+      </button>
+      <div class="catalog-select__body">
+        <form action="#" class="catalog-select__form form">
+          <ul class="catalog-select__list list-reset">
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Диваны" aria-label="Категория Диваны">
+                <span class="filters__descr form__descr">Диваны</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Кресла"  aria-label="Категория Креслa">
+                <span class="filters__descr form__descr">Кресла</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Пуфы" aria-label="Категория Пуфы">
+                <span class="filters__descr form__descr">Пуфы</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Кровати" aria-label="Категория Кровати">
+                <span class="filters__descr form__descr">Кровати</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Тумбы" aria-label="Категория Тумбы">
+                <span class="filters__descr form__descr">Тумбы</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Комоды" aria-label="Категория Комоды">
+                <span class="filters__descr form__descr">Комоды</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Стулья" aria-label="Категория Стулья">
+                <span class="filters__descr form__descr">Стулья</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Столы" aria-label="Категория Столы">
+                <span class="filters__descr form__descr">Столы</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="category" value="Аксессуары" aria-label="Категория Аксессуары">
+                <span class="filters__descr form__descr">Аксессуары</span>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li class="filters-320__item">
+    <div class="filters-320__select catalog-select price">
+      <button class="catalog-select__header btn-reset" type="button" aria-label="Кнопка фильтровать по цене">
+        Цена
+      </button>
+      <div class="catalog-select__body">
+        <form action="#" class="catalog-select__form">
+          <ul class="catalog-select__list list-reset">
+            <li class="catalog-select__item">
+              <label class="price__label">
+                <span class="price__text">от</span>
+                <input type="number" min="2000" max="200000" placeholder="2000" class="price__input" id="input-0">
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="price__label">
+                <span class="price__text">до</span>
+                <input type="number" min="2000" max="200000" placeholder="150000" class="price__input" id="input-1">
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </li>
+
+  <li class="filters-320__item">
+    <div class="filters-320__select catalog-select">
+      <button class="catalog-select__header btn-reset" type="button" aria-label="Кнопка фильтровать по скидке">
+        Скидка
+      </button>
+      <div class="catalog-select__body">
+        <form action="#" class="catalog-select__form">
+          <ul class="catalog-select__list list-reset">
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="discount" value="5001" aria-label="Категория скидка более 5000">
+                <span class="filters__descr form__descr">Более 5 000</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="discount" value="5000" aria-label="Категория скидка менее 5000">
+                <span class="filters__descr form__descr">Менее 5 000</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="discount" value="Не важно" aria-label="Категория скидка не важна">
+                <span class="filters__descr form__descr">Не важно</span>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li class="filters-320__item">
+    <div class="filters-320__select catalog-select">
+      <button class="catalog-select__header btn-reset" type="button" aria-label="Кнопка фильтровать по цвету">
+        Цвет
+      </button>
+      <div class="catalog-select__body">
+        <form action="#" class="catalog-select__form">
+          <ul class="catalog-select__list list-reset">
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Коричневый" aria-label="Категория коричневый цвет">
+                <span class="filters__descr form__descr">Коричневый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Черный" aria-label="Категория черный цвет">
+                <span class="filters__descr form__descr">Черный</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Бежевый" aria-label="Категория бежевый цвет">
+                <span class="filters__descr form__descr">Бежевый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Серый" aria-label="Категория серый цвет">
+                <span class="filters__descr form__descr">Серый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Белый" aria-label="Категория белый цвет">
+                <span class="filters__descr form__descr">Белый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Синий" aria-label="Категория синий цвет">
+                <span class="filters__descr form__descr">Синий</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Оранжевый" aria-label="Категория оранжевый цвет">
+                <span class="filters__descr form__descr">Оранжевый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Жёлтый" aria-label="Категория жёлтый цвет">
+                <span class="filters__descr form__descr">Жёлтый</span>
+              </label>
+            </li>
+            <li class="catalog-select__item">
+              <label class="filters__label form__check">
+                <input type="checkbox" class="filters__checkbox form__checkbox visually-hidden" name="color" value="Зеленый" aria-label="Категория зеленый цвет">
+                <span class="filters__descr form__descr">Зеленый</span>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </li>
+</ul>
 
         </div>
         <ul class="catalog-hero__list list-reset">

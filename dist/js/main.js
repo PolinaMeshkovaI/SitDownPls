@@ -3202,7 +3202,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal_buy_in_one_click__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal-buy-in-one-click */ "./src/js/components/modal-buy-in-one-click.js");
 /* harmony import */ var _components_modal_success_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal-success-form */ "./src/js/components/modal-success-form.js");
 /* harmony import */ var _components_modal_scale__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modal-scale */ "./src/js/components/modal-scale.js");
-/* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
+/* harmony import */ var _components_catlog_dropdown__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/catlog-dropdown */ "./src/js/components/catlog-dropdown.js");
+/* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
 
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesCity)();
 (0,_components_castom_choices__WEBPACK_IMPORTED_MODULE_0__.castomChoicesProduct)();
@@ -3229,7 +3230,9 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_components_modal_scale__WEBPACK_IMPORTED_MODULE_9__.modalScaleClick)();
 
-(0,_components_validation__WEBPACK_IMPORTED_MODULE_10__.validation)();
+(0,_components_catlog_dropdown__WEBPACK_IMPORTED_MODULE_10__.catalogDropdown)();
+
+(0,_components_validation__WEBPACK_IMPORTED_MODULE_11__.validation)();
 
 /***/ }),
 
@@ -3354,6 +3357,43 @@ const castomChoicesColor = () => {
       itemSelectText: ""
     });
   }
+};
+
+/***/ }),
+
+/***/ "./src/js/components/catlog-dropdown.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/catlog-dropdown.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "catalogDropdown": () => (/* binding */ catalogDropdown)
+/* harmony export */ });
+const catalogDropdown = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownBtn = document.querySelectorAll('.catalog-select__header');
+    const dropdownMenu = document.querySelectorAll('.catalog-select__body');
+    if (dropdownBtn) {
+      dropdownBtn.forEach((el, index) => {
+        el.addEventListener('click', event => {
+          event.preventDefault();
+          const dropdownMenuClassList = dropdownMenu[index].classList;
+          if (dropdownMenuClassList.contains('catalog-select__body--visible')) {
+            dropdownMenuClassList.remove('catalog-select__body--visible');
+            dropdownBtn[index].classList.remove('catalog-select__header--active');
+          } else {
+            dropdownMenu.forEach(el => el.classList.remove('catalog-select__body--visible'));
+            dropdownMenuClassList.add('catalog-select__body--visible');
+            dropdownBtn.forEach(el => el.classList.remove('catalog-select__header--active'));
+            dropdownBtn[index].classList.add('catalog-select__header--active');
+          }
+        });
+      });
+    }
+  });
 };
 
 /***/ }),

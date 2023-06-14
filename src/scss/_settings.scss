@@ -34,7 +34,8 @@ a {
 }
 
 .site-container {
-  overflow-x: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .is-hidden {

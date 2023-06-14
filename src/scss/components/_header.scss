@@ -53,17 +53,25 @@
     &--768 {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 110px;
       width: 100%;
-      height: 100vh;
+      min-height: 300px;
       z-index: 50;
-      padding-top: 15px;
-      padding-left: 21px;
+      padding: 34px 72px 60px 72px;
       overflow-y: auto;
-      background-color: $pink_light;
+      background-color: $light-color;
+      background-image: url(../../img/elephant_grey.svg);
+      background-position: right 72px bottom 60px;
+      background-repeat: no-repeat;
+      background-size: 161px 112px;
       visibility: hidden;
       transform: translateX(120%);
       transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+      @media (max-width: 765px) {
+       top: 123px;
+       padding-left: 12px;
+       background-image: none;
+      }
     }
     &--active {
         visibility: visible;
@@ -310,22 +318,41 @@
 }
 .nav {
   &__close {
-    &--img {
-      fill: $primary;
-      transition: fill 0.3s ease-in-out;
-      &:hover {
-        fill: $primary_light;
-      }
-      &:active {
-        fill: $primary_shade;
-      }
+    margin-bottom: 30px;
+    @media (max-width: 765px) {
+      margin-bottom: 22px;
+    }
+  }
+  &__img-close {
+    fill: $primary;
+    transition: fill 0.3s ease-in-out;
+    &:hover {
+      fill: $primary_light;
+    }
+    &:active {
+      fill: $primary_shade;
     }
   }
   &__list {
     @include flex-v-center;
     @media (max-width: 1008px) {
-      flex-direction: column;
-      align-items: start;
+      display: grid;
+      width: 53%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-auto-flow: column;
+      grid-column-gap: 23px;
+      grid-row-gap: 41px;
+      @media (max-width: 765px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: start;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+      }
+
     }
   }
   &__link {
@@ -351,9 +378,12 @@
     @media (max-width: 1840px) {
       margin-right: 41px;
     }
-    @media (max-width: 1008px) {
-      margin-bottom: 15px;
-      margin-right: 0;
+    // @media (max-width: 1008px) {
+    //   margin-bottom: 41px;
+    //   margin-right: 0;
+    // }
+    @media (max-width: 765px) {
+      margin-bottom: 41px;
     }
   }
 }
